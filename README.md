@@ -1,5 +1,7 @@
 # Gpi scripts
 
+Install the Xboxdvr from the driver packages in RetroPie-Setup, Travis!!!
+
 
 Usage 
 
