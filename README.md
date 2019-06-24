@@ -2,6 +2,7 @@
 
 Install the Xboxdvr from the driver packages in RetroPie-Setup, Travis!!!
 
+Enable it and disable it. Gah!
 
 Usage 
 
