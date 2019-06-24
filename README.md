@@ -7,15 +7,11 @@ Enable it and disable it. Gah!
 Usage
 
 ```shell
-cd /opt/retropie/configs/all && sudo rm runcommand-onend.sh && sudo rm runcommand-onstart.sh && wget https://raw.githubusercontent.com/CrashCortez/Gpi/master/runcommand-onend.sh && wget https://raw.githubusercontent.com/CrashCortez/Gpi/master/runcommand-onstart.sh && sudo chmod a+x *.sh 
+cd /RetroPie/retropiemenu && wget https://raw.githubusercontent.com/CrashCortez/Gpi/master/controls_updater.sh && sudo chmod 775 controls_updater.sh
 ```
 
 Option 2
 
 ```shell
 cd && cd /opt/retropie/configs/all && wget -N https://raw.githubusercontent.com/CrashCortez/Gpi/master/runcommand-onend.sh && wget - N https://raw.githubusercontent.com/CrashCortez/Gpi/master/runcommand-onstart.sh && sudo chmod a+x *.sh 
-```
-
-```shell
-wget https://raw.githubusercontent.com/CrashCortez/Gpi/master/runcommand-onend.sh && mv runcommand-onend.sh /opt/retropie/configs/all
 ```
