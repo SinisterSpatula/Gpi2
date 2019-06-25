@@ -171,7 +171,7 @@ then
     --evdev-absmap ABS_X=x1,ABS_Y=y1,ABS_RX=x2,ABS_RY=y2,ABS_Z=lt,ABS_RZ=rt \
     --evdev-keymap BTN_SOUTH=a,BTN_EAST=b,BTN_NORTH=x,BTN_WEST=y,BTN_TL=lb,BTN_TR=rb,BTN_THUMBL=tl,BTN_THUMBR=tr,BTN_MODE=guide,BTN_SELECT=back,BTN_START=start,BTN_TRIGGER_HAPPY3=du,BTN_TRIGGER_HAPPY4=dd,BTN_TRIGGER_HAPPY1=dl,BTN_TRIGGER_HAPPY2=dr \
     --evdev-absmap ABS_HAT0X=dpad_x,ABS_HAT0Y=dpad_y \
-    --ui-buttonmap x=KEY_S,a=KEY_D,b=KEY_C,lb=KEY_A,back+lb=KEY_1,Y=KEY_X,rb=KEY_F,back+rb=KEY_SHIFT+KEY_1 \
+    --ui-buttonmap x=KEY_S,a=KEY_D,b=KEY_C,lb=KEY_A,back+lb=KEY_1,Y=KEY_X,rb=KEY_F,back+rb=KEY_LEFTSHIFT+KEY_1 \
     --ui-buttonmap start=KEY_ENTER,back=KEY_TAB,back+x=KEY_F10,back+start=KEY_ESCAPE \
     --ui-buttonmap du=KEY_UP,dd=KEY_DOWN,dl=KEY_LEFT,dr=KEY_RIGHT \
 &
