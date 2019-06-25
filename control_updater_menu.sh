@@ -49,13 +49,13 @@ cd
 cd /opt/retropie/configs/all
 sudo rm runcommand-onend.sh
 sudo rm runcommand-onstart.sh
-wget https://raw.githubusercontent.com/CrashCortez/Gpi/master/runcommand-onend.sh
-wget https://raw.githubusercontent.com/CrashCortez/Gpi/master/runcommand-onstart.sh
+wget https://raw.githubusercontent.com/SinisterSpatula/Gpi/master/runcommand-onend.sh
+wget https://raw.githubusercontent.com/SinisterSpatula/Gpi/master/runcommand-onstart.sh
 sudo chmod a+x *.sh
 cd
 cd /opt/retropie/supplementary/xboxdvr/bin
 sudo rm quit.sh
-wget https://raw.githubusercontent.com/CrashCortez/Gpi/master/quit.sh
+wget https://raw.githubusercontent.com/SinisterSpatula/Gpi/master/quit.sh
 sudo chmod a+x quit.sh
 }
 
@@ -68,13 +68,13 @@ cd
 cd /opt/retropie/configs/all
 sudo rm runcommand-onend.sh
 sudo rm runcommand-onstart.sh
-wget https://raw.githubusercontent.com/CrashCortez/Gpi/test/runcommand-onend.sh
-wget https://raw.githubusercontent.com/CrashCortez/Gpi/test/runcommand-onstart.sh
+wget https://raw.githubusercontent.com/SinisterSpatula/Gpi/test/runcommand-onend.sh
+wget https://raw.githubusercontent.com/SinisterSpatula/Gpi/test/runcommand-onstart.sh
 sudo chmod a+x *.sh
 cd
 cd /opt/retropie/supplementary/xboxdvr/bin
 sudo rm quit.sh
-wget https://raw.githubusercontent.com/CrashCortez/Gpi/test/quit.sh
+wget https://raw.githubusercontent.com/SinisterSpatula/Gpi/test/quit.sh
 sudo chmod a+x quit.sh
 }
 
