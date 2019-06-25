@@ -48,12 +48,15 @@ function main_menu() {
 function update_controls() {
 cd
 cd /opt/retropie/configs/all
-wget -N https://raw.githubusercontent.com/CrashCortez/Gpi/master/runcommand-onend.sh
-wget - N https://raw.githubusercontent.com/CrashCortez/Gpi/master/runcommand-onstart.sh
+sudo rm runcommand-onend.sh
+sudo rm runcommand-onstart.sh
+wget https://raw.githubusercontent.com/CrashCortez/Gpi/master/runcommand-onend.sh
+wget https://raw.githubusercontent.com/CrashCortez/Gpi/master/runcommand-onstart.sh
 sudo chmod a+x *.sh
 cd
 cd /opt/retropie/supplementary/xboxdvr/bin
-wget -N https://raw.githubusercontent.com/CrashCortez/Gpi/master/quit.sh
+sudo rm quit.sh
+wget https://raw.githubusercontent.com/CrashCortez/Gpi/master/quit.sh
 sudo chmod a+x quit.sh
 }
 
@@ -64,12 +67,15 @@ break
 function controls_beta() {
 cd
 cd /opt/retropie/configs/all
-wget -N https://raw.githubusercontent.com/CrashCortez/Gpi/test/runcommand-onend.sh
-wget - N https://raw.githubusercontent.com/CrashCortez/Gpi/test/runcommand-onstart.sh
+sudo rm runcommand-onend.sh
+sudo rm runcommand-onstart.sh
+wget https://raw.githubusercontent.com/CrashCortez/Gpi/test/runcommand-onend.sh
+wget https://raw.githubusercontent.com/CrashCortez/Gpi/test/runcommand-onstart.sh
 sudo chmod a+x *.sh
 cd
 cd /opt/retropie/supplementary/xboxdvr/bin
-wget -N https://raw.githubusercontent.com/CrashCortez/Gpi/test/quit.sh
+sudo rm quit.sh
+wget https://raw.githubusercontent.com/CrashCortez/Gpi/test/quit.sh
 sudo chmod a+x quit.sh
 }
 
