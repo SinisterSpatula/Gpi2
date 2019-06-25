@@ -157,7 +157,7 @@ fi
 
 
 #Menu (select+X), quit (select+start)
-if  [ "$2" = snes9x" ]
+if  [ "$2" = snes9x-rpi" ]
 then
     sudo /opt/retropie/supplementary/xboxdrv/bin/xboxdrv \
     --evdev /dev/input/by-id/usb-RetroFlag_GPi_Case_RetroFlag_01-event-joystick \
