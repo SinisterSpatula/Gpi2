@@ -79,7 +79,7 @@ sudo chmod a+x quit.sh
 }
 
 function system_shutdown() {
-sudo shutdown now
+sudo shutdown -P now
 }
 
 function system_reboot() {
