@@ -1,4 +1,4 @@
 #1/bin/sh
 
-sudo killall pscx
+sudo killall pcsx
 sudo killall minecraft-pi
