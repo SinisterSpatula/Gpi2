@@ -7,7 +7,7 @@ Enable it and disable it. Gah!
 Usage
 
 ```shell
-cd RetroPie/retropiemenu && wget -N https://raw.githubusercontent.com/SinisterSpatula/Gpi/master/controls_updater.sh && sudo chmod 775 controls_updater.sh
+cd && cd RetroPie/retropiemenu && wget -N https://raw.githubusercontent.com/SinisterSpatula/Gpi/master/control_updater_menu.sh && sudo chmod 775 control_updater_menu.sh
 ```
 
 Option 2
