@@ -72,7 +72,7 @@ wget https://raw.githubusercontent.com/SinisterSpatula/Gpi/test/runcommand-onend
 wget https://raw.githubusercontent.com/SinisterSpatula/Gpi/test/runcommand-onstart.sh
 sudo chmod a+x *.sh
 cd
-cd /opt/retropie/supplementary/xboxdvr/bin
+cd /opt/retropie/supplementary/xboxdrv/bin
 sudo rm quit.sh
 wget https://raw.githubusercontent.com/SinisterSpatula/Gpi/test/quit.sh
 sudo chmod a+x quit.sh
