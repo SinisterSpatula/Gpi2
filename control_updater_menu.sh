@@ -12,10 +12,10 @@ export NCURSES_NO_UTF8_ACS=1
 #IFS=';'
 
 # Welcome
- dialog --backtitle "GPi Controls MENU" --title "The Gpi Controls Menu Utility" \
-    --yesno "\nDo you want to proceed?" \
-    28 110 2>&1 > /dev/tty \
-    || exit
+ #dialog --backtitle "GPi Controls MENU" --title "The Gpi Controls Menu Utility" \
+ #   --yesno "\nDo you want to proceed?" \
+ #   28 110 2>&1 > /dev/tty \
+ #   || exit
 
 
 function main_menu() {
