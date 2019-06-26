@@ -19,6 +19,7 @@ then
     --ui-buttonmap du=KEY_UP,dd=KEY_DOWN,dl=KEY_LEFT,dr=KEY_RIGHT \
     --ui-buttonmap x=KEY_S,a=KEY_D,b=KEY_C,lb=KEY_A,back+lb=KEY_1,Y=KEY_X,rb=KEY_F,back+rb=KEY_LEFTSHIFT+KEY_1 \
 &
+export SDL_JOYSTICK_DEVICE=/dev/input/js1
 fi
 
 
