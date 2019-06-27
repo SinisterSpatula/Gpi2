@@ -158,7 +158,7 @@ fi
 #Save states (select+RB) and Load states (select+LB).  Select+Start is Quit.  Select+X is Menu. Y+L1 = L2.(sameforR2)
 if [ "$2" = "pcsx-rearmed" ]
 then
-    fbset -g 320 240 320 480 16
+    fbset -g 320 240 640 480 16
     sudo /opt/retropie/supplementary/xboxdrv/bin/xboxdrv \
     --evdev /dev/input/by-id/usb-RetroFlag_GPi_Case_RetroFlag_01-event-joystick \
     --detach-kernel-driver \
