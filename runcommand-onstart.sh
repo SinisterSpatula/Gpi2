@@ -1,7 +1,6 @@
 #!/bin/sh
 
-#KEY_TAB:900 KEY_ENTER:900
-#select+start=quit, A and B are turbo if held, LB and RB has secondary function if held.
+#select+start=quit, LB and RB has secondary function with y button hold.
 if [ "$2" = "mame4all" ]
 then
     sudo /opt/retropie/supplementary/xboxdrv/bin/xboxdrv \
