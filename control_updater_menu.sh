@@ -101,13 +101,14 @@ exit
 }
 
 function update_snes9x() {
+}
 #cd
 #cd /opt/retropie/emulators/snes9x
 #sudo rm snes9x
 #wget -N https://raw.githubusercontent.com/SinisterSpatula/Gpi/master/snes9x
 #sudo chmod 775 snes9x
 #sudo chmod a+x snes9x
-}
+
 # Main
 
 main_menu
