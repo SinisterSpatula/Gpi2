@@ -48,7 +48,16 @@ function main_menu() {
 # Functions for menu #
 ######################
 
+function validate_url(){
+  if [[ `wget -S --spider $1  2>&1 | grep 'HTTP/1.1 200 OK'` ]]; then
+    return 0
+  else
+    return 1
+  fi
+}
+
 function update_controls() {
+if validate_url https://raw.githubusercontent.com/SinisterSpatula/Gpi/master/runcommand-onstart.sh; then
 cd
 cd /opt/retropie/configs/all
 sudo rm runcommand-onend.sh
@@ -61,6 +70,16 @@ cd /opt/retropie/supplementary/xboxdrv/bin
 sudo rm quit.sh
 sudo wget https://raw.githubusercontent.com/SinisterSpatula/Gpi/master/quit.sh
 sudo chmod a+x quit.sh
+    echo "---------------"
+    echo "|| Success!  ||"
+    echo "---------------"
+    sleep 5s
+  else
+    echo "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
+    echo "@@ FAILED!  File not available or wifi off @@"
+    echo "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
+    sleep 10s
+fi
 }
 
 function launch_commandline() {
@@ -68,6 +87,7 @@ break
 }
 
 function controls_beta() {
+if validate_url https://raw.githubusercontent.com/SinisterSpatula/Gpi/test/runcommand-onstart.sh; then
 cd
 cd /opt/retropie/configs/all
 sudo rm runcommand-onend.sh
@@ -80,6 +100,16 @@ cd /opt/retropie/supplementary/xboxdrv/bin
 sudo rm quit.sh
 sudo wget https://raw.githubusercontent.com/SinisterSpatula/Gpi/test/quit.sh
 sudo chmod a+x quit.sh
+    echo "---------------"
+    echo "|| Success!  ||"
+    echo "---------------"
+    sleep 5s
+  else
+    echo "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
+    echo "@@ FAILED!  File not available or wifi off @@"
+    echo "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
+    sleep 10s
+fi
 }
 
 function system_shutdown() {
@@ -91,23 +121,47 @@ sudo reboot
 }
 
 function update_menu() {
+if validate_url https://raw.githubusercontent.com/SinisterSpatula/Gpi/master/control_updater_menu.sh; then
 cd
 cd ~/RetroPie/retropiemenu
 sudo rm control_updater_menu.sh
 wget -N https://raw.githubusercontent.com/SinisterSpatula/Gpi/master/control_updater_menu.sh
 sudo chmod 775 control_updater_menu.sh
 sudo chmod a+x *.sh
+    echo "---------------"
+    echo "|| Success!  ||"
+    echo "---------------"
+    sleep 5s
 exit
+  else
+    echo "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
+    echo "@@ FAILED!  File not available or wifi off @@"
+    echo "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
+    sleep 10s
+fi
 }
 
 function update_snes9x() {
-#cd
-#cd /opt/retropie/emulators/snes9x
-#sudo rm snes9x
-#wget -N https://raw.githubusercontent.com/SinisterSpatula/Gpi/master/snes9x
-#sudo chmod 775 snes9x
-#sudo chmod a+x snes9x
+if validate_url https://raw.githubusercontent.com/SinisterSpatula/Gpi/master/snes9x; then
+cd
+cd /opt/retropie/emulators/snes9x
+sudo rm snes9x
+wget -N https://raw.githubusercontent.com/SinisterSpatula/Gpi/master/snes9x
+sudo chmod 775 snes9x
+sudo chmod a+x snes9x
+    echo "---------------"
+    echo "|| Success!  ||"
+    echo "---------------"
+    sleep 5s
 exit
+
+  else
+    echo "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
+    echo "@@ FAILED!  File not available or wifi off @@"
+    echo "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
+    sleep 10s
+fi
+
 }
 # Main
 
