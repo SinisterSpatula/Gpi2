@@ -76,7 +76,9 @@ sudo chmod a+x quit.sh
     sleep 5s
   else
     echo "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
+    echo " "
     echo "FAILED!  File not available or wifi off"
+    echo " "
     echo "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
     sleep 10s
 fi
@@ -106,8 +108,11 @@ sudo chmod a+x quit.sh
     sleep 5s
   else
     echo "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
+    echo " "
     echo "FAILED!  File not available or wifi off"
+    echo " "
     echo "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
+    sleep 10s
     sleep 10s
 fi
 }
@@ -135,8 +140,11 @@ sudo chmod a+x *.sh
 exit
   else
     echo "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
+    echo " "
     echo "FAILED!  File not available or wifi off"
+    echo " "
     echo "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
+    sleep 10s
     sleep 10s
 fi
 }
@@ -157,8 +165,11 @@ exit
 
   else
     echo "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
+    echo " "
     echo "FAILED!  File not available or wifi off"
+    echo " "
     echo "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
+    sleep 10s
     sleep 10s
 fi
 
