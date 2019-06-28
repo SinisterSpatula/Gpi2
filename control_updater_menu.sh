@@ -26,15 +26,19 @@ function main_menu() {
             --menu "What action would you like to perform?" 25 75 20 \
             1 "Update Controls" \
             2 "Update Controls Beta" \
-            3 "System Reboot" \
-            4 "System Shutdown" \
+            3 "Update this menu" \
+            4 "Update snes9x" \
+            5 "System Reboot" \
+            6 "System Shutdown" \
             2>&1 > /dev/tty)
 
         case "$choice" in
             1) update_controls  ;;
             2) controls_beta  ;;
-            3) system_reboot  ;;
-            4) system_shutdown  ;;
+            3) update_menu  ;;
+            4) update_snes9x  ;;
+            5) system_reboot  ;;
+            6) system_shutdown  ;;
             *)  break ;;
         esac
     done
@@ -84,6 +88,26 @@ sudo shutdown -P now
 
 function system_reboot() {
 sudo reboot
+}
+
+function update_menu() {
+cd
+cd RetroPie/retropiemenu
+sudo rm control_updater_menu.sh
+wget -N https://raw.githubusercontent.com/SinisterSpatula/Gpi/master/control_updater_menu.sh
+sudo chmod 775 control_updater_menu.sh
+sudo chmod a+x *.sh
+exit
+}
+
+function update_snes9x() {
+#cd
+#cd /opt/retropie/emulators/snes9x
+#sudo rm snes9x
+#wget -N https://raw.githubusercontent.com/SinisterSpatula/Gpi/master/snes9x
+#sudo chmod 775 snes9x
+#sudo chmod a+x snes9x
+exit
 }
 # Main
 
