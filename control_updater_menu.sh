@@ -75,9 +75,9 @@ sudo chmod a+x quit.sh
     echo "---------------"
     sleep 5s
   else
-    echo "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
-    echo "@@ FAILED!  File not available or wifi off @@"
-    echo "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
+    echo "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
+    echo "FAILED!  File not available or wifi off"
+    echo "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
     sleep 10s
 fi
 }
@@ -105,9 +105,9 @@ sudo chmod a+x quit.sh
     echo "---------------"
     sleep 5s
   else
-    echo "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
-    echo "@@ FAILED!  File not available or wifi off @@"
-    echo "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
+    echo "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
+    echo "FAILED!  File not available or wifi off"
+    echo "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
     sleep 10s
 fi
 }
@@ -134,9 +134,9 @@ sudo chmod a+x *.sh
     sleep 5s
 exit
   else
-    echo "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
-    echo "@@ FAILED!  File not available or wifi off @@"
-    echo "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
+    echo "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
+    echo "FAILED!  File not available or wifi off"
+    echo "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
     sleep 10s
 fi
 }
@@ -156,9 +156,9 @@ sudo chmod a+x snes9x
 exit
 
   else
-    echo "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
-    echo "@@ FAILED!  File not available or wifi off @@"
-    echo "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
+    echo "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
+    echo "FAILED!  File not available or wifi off"
+    echo "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
     sleep 10s
 fi
 
