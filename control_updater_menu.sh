@@ -92,7 +92,7 @@ sudo reboot
 
 function update_menu() {
 cd
-cd RetroPie/retropiemenu
+cd ~/RetroPie/retropiemenu
 sudo rm control_updater_menu.sh
 wget -N https://raw.githubusercontent.com/SinisterSpatula/Gpi/master/control_updater_menu.sh
 sudo chmod 775 control_updater_menu.sh
