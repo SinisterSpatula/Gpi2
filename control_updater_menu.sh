@@ -27,7 +27,7 @@ function main_menu() {
             1 "Update Controls" \
             2 "Update Controls Beta" \
             3 "Update this menu" \
-            4 "Update snes9x" \
+            4 "Update snes9x (coming soon)" \
             5 "System Reboot" \
             6 "System Shutdown" \
             2>&1 > /dev/tty)
