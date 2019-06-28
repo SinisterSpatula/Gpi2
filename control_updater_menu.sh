@@ -26,7 +26,7 @@ function main_menu() {
             --menu "What action would you like to perform?" 25 75 20 \
             1 "Update Controls" \
             2 "Update Controls Beta" \
-            3 "Update this menu" \
+            3 "Update this menu and exit" \
             4 "Update snes9x" \
             5 "System Reboot" \
             6 "System Shutdown" \
