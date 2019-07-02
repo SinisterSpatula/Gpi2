@@ -27,18 +27,16 @@ function main_menu() {
             1 "Update Controls" \
             2 "Update Controls Beta" \
             3 "Update this menu" \
-            4 "Update snes9x (coming soon)" \
-            5 "System Reboot" \
-            6 "System Shutdown" \
+            4 "System Reboot" \
+            5 "System Shutdown" \
             2>&1 > /dev/tty)
 
         case "$choice" in
             1) update_controls  ;;
             2) controls_beta  ;;
             3) update_menu  ;;
-            4) update_snes9x  ;;
-            5) system_reboot  ;;
-            6) system_shutdown  ;;
+            4) system_reboot  ;;
+            5) system_shutdown  ;;
             *)  break ;;
         esac
     done
@@ -149,31 +147,6 @@ exit
 fi
 }
 
-function update_snes9x() {
-if validate_url https://raw.githubusercontent.com/SinisterSpatula/Gpi/master/snes9x; then
-cd
-cd /opt/retropie/emulators/snes9x
-sudo rm snes9x
-wget -N https://raw.githubusercontent.com/SinisterSpatula/Gpi/master/snes9x
-sudo chmod 775 snes9x
-sudo chmod a+x snes9x
-    echo "---------------"
-    echo "|| Success!  ||"
-    echo "---------------"
-    sleep 5s
-exit
-
-  else
-    echo "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
-    echo ".                                      ."
-    echo ".FAILED! File not available or wifi off."
-    echo ".                                      ."
-    echo "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
-    sleep 10s
-    sleep 10s
-fi
-
-}
 # Main
 
 main_menu
