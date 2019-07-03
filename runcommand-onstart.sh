@@ -1,21 +1,5 @@
 #!/bin/sh
 
-#quit (select+start), requires /etc/udev/rules.d/99-xboxdrv.rules
-if  [ "$2" = "snes9x" ]
-then
-    sudo /opt/retropie/supplementary/xboxdrv/bin/xboxdrv \
-    --evdev /dev/input/by-id/usb-RetroFlag_GPi_Case_RetroFlag_01-event-joystick \
-    --detach-kernel-driver \
-    --silent \
-    --force-feedback \
-    --deadzone-trigger 15% \
-    --deadzone 4000 \
-    --mimic-xpad \
-    --evdev-keymap BTN_SELECT=back,BTN_START=start \
-    --ui-buttonmap back+start=KEY_ESC \
-&
-fi
-
 
 #select+start=quit, LB and RB has secondary function with y button hold.
 if [ "$2" = "mame4all" ]
