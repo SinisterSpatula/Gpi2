@@ -1,6 +1,6 @@
 #!/bin/sh
 
-#quit (select+start) us my repo to build from source.
+#quit (select+start) use my repo to build from source.
 if  [ "$2" = "snes9x" ]
 then
     sudo /opt/retropie/supplementary/xboxdrv/bin/xboxdrv \
