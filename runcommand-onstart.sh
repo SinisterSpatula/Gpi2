@@ -17,7 +17,7 @@ then
     --evdev-absmap ABS_HAT0X=dpad_x,ABS_HAT0Y=dpad_y \
     --ui-buttonmap x=KEY_RIGHTCTRL,a=void,b=KEY_SPACE+KEY_E,y=KEY_RIGHTSHIFT,lb=KEY_A,rb=KEY_D \
     --ui-buttonmap start=KEY_ENTER+KEY_M,back=KEY_ESC,back+start=KEY_F10 \
-    --ui-buttonmap du=KEY_UP+KEY_W,du+a^autofire:10:500=KEY_HOME,a+du^autofire:10:500=KEY_HOME,dd=KEY_DOWN+KEY_S,dd+a^autofire:10:500=KEY_END,a+dd^autofire:10:500=KEY_END,dl=KEY_LEFT,dr=KEY_RIGHT \
+    --ui-buttonmap du=KEY_UP+KEY_W,du+a^autofire:0:500=KEY_HOME,a+du^autofire:0:500=KEY_HOME,dd=KEY_DOWN+KEY_S,dd+a^autofire:0:500=KEY_END,a+dd^autofire:0:500=KEY_END,dl=KEY_LEFT,dr=KEY_RIGHT \
 &
 fi
 
