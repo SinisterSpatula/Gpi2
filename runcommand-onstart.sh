@@ -174,3 +174,5 @@ then
     --ui-buttonmap du=KEY_UP,dd=KEY_DOWN,dl=KEY_LEFT,dr=KEY_RIGHT \
 &
 fi
+
+sudo pkill -STOP mpg123 > /dev/null 2>&1
