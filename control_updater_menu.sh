@@ -128,7 +128,7 @@ if validate_url https://raw.githubusercontent.com/SinisterSpatula/Gpi/master/con
 cd
 cd ~/RetroPie/retropiemenu
 sudo rm control_updater_menu.sh
-wget -N https://raw.githubusercontent.com/SinisterSpatula/Gpi/master/control_updater_menu.sh
+sudo wget -N https://raw.githubusercontent.com/SinisterSpatula/Gpi/master/control_updater_menu.sh
 sudo chmod 775 control_updater_menu.sh
 sudo chmod a+x *.sh
     echo "---------------"
