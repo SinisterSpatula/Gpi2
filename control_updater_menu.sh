@@ -58,14 +58,11 @@ function update_controls() {
 if validate_url https://raw.githubusercontent.com/SinisterSpatula/Gpi/master/runcommand-onstart.sh; then
 cd
 cd /opt/retropie/configs/all
-sudo rm runcommand-onend.sh
-sudo rm runcommand-onstart.sh
 sudo wget -N https://raw.githubusercontent.com/SinisterSpatula/Gpi/master/runcommand-onend.sh
 sudo wget -N https://raw.githubusercontent.com/SinisterSpatula/Gpi/master/runcommand-onstart.sh
 sudo chmod a+x *.sh
 cd
 cd /opt/retropie/supplementary/xboxdrv/bin
-sudo rm quit.sh
 sudo wget -N https://raw.githubusercontent.com/SinisterSpatula/Gpi/master/quit.sh
 sudo chmod a+x quit.sh
     echo "---------------"
@@ -90,14 +87,11 @@ function controls_beta() {
 if validate_url https://raw.githubusercontent.com/SinisterSpatula/Gpi/test/runcommand-onstart.sh; then
 cd
 cd /opt/retropie/configs/all
-sudo rm runcommand-onend.sh
-sudo rm runcommand-onstart.sh
 sudo wget -N https://raw.githubusercontent.com/SinisterSpatula/Gpi/test/runcommand-onend.sh
 sudo wget -N https://raw.githubusercontent.com/SinisterSpatula/Gpi/test/runcommand-onstart.sh
 sudo chmod a+x *.sh
 cd
 cd /opt/retropie/supplementary/xboxdrv/bin
-sudo rm quit.sh
 sudo wget -N https://raw.githubusercontent.com/SinisterSpatula/Gpi/test/quit.sh
 sudo chmod a+x quit.sh
     echo "---------------"
@@ -127,7 +121,6 @@ function update_menu() {
 if validate_url https://raw.githubusercontent.com/SinisterSpatula/Gpi/master/control_updater_menu.sh; then
 cd
 cd ~/RetroPie/retropiemenu
-sudo rm control_updater_menu.sh
 sudo wget -N https://raw.githubusercontent.com/SinisterSpatula/Gpi/master/control_updater_menu.sh
 sudo chmod 775 control_updater_menu.sh
 sudo chmod a+x *.sh
