@@ -105,7 +105,6 @@ sudo chmod a+x quit.sh
     echo ".                                      ."
     echo "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
     sleep 10s
-    sleep 10s
 fi
 }
 
@@ -135,7 +134,6 @@ exit
     echo ".FAILED! File not available or wifi off."
     echo ".                                      ."
     echo "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
-    sleep 10s
     sleep 10s
 fi
 }
