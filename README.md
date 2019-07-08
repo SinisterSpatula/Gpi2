@@ -4,7 +4,17 @@ Install Xboxdvr from the driver packages in RetroPie-Setup
 
 Enable it and disable it.
 
-Place the commands in your runcommand-onstart.sh and runcommand-onend.sh, look at the ones in this repository to see the commands that are needed in those scripts.
+Modify your runcommand-onstart.sh to include the xboxdrv command:
+
+```
+#!/bin/sh
+
+bash ./xboxdrvstart.sh $1 $2 $3
+sudo pkill -STOP mpg123 > /dev/null 2>&1
+```
+
+Modify your runcommand-onend.sh to include the xboxdrv command:
+
 
 
 
