@@ -15,7 +15,12 @@ sudo pkill -STOP mpg123 > /dev/null 2>&1
 
 Modify your runcommand-onend.sh to include the xboxdrv command:
 
+```
+#!/bin/sh
 
+bash ./xboxdrvend.sh
+sudo pkill -CONT mpg123 > /dev/null 2>&1
+```
 
 
 # Install the controls_updater_menu
