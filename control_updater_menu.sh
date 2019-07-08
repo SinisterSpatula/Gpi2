@@ -55,11 +55,11 @@ function validate_url(){
 }
 
 function update_controls() {
-if validate_url https://raw.githubusercontent.com/SinisterSpatula/Gpi/master/runcommand-onstart.sh; then
+if validate_url https://raw.githubusercontent.com/SinisterSpatula/Gpi/master/xboxdrvstart.sh; then
 cd
 cd /opt/retropie/configs/all
-sudo wget -O runcommand-onend.sh https://raw.githubusercontent.com/SinisterSpatula/Gpi/master/runcommand-onend.sh
-sudo wget -O runcommand-onstart.sh https://raw.githubusercontent.com/SinisterSpatula/Gpi/master/runcommand-onstart.sh
+sudo wget -O runcommand-onend.sh https://raw.githubusercontent.com/SinisterSpatula/Gpi/master/xboxdrvend.sh
+sudo wget -O runcommand-onstart.sh https://raw.githubusercontent.com/SinisterSpatula/Gpi/master/xboxdrvstart.sh
 sudo chmod a+x *.sh
 cd
 cd /opt/retropie/supplementary/xboxdrv/bin
@@ -84,11 +84,11 @@ break
 }
 
 function controls_beta() {
-if validate_url https://raw.githubusercontent.com/SinisterSpatula/Gpi/test/runcommand-onstart.sh; then
+if validate_url https://raw.githubusercontent.com/SinisterSpatula/Gpi/test/xboxdrvstart.sh; then
 cd
 cd /opt/retropie/configs/all
-sudo wget -O runcommand-onend.sh https://raw.githubusercontent.com/SinisterSpatula/Gpi/test/runcommand-onend.sh
-sudo wget -O runcommand-onstart.sh https://raw.githubusercontent.com/SinisterSpatula/Gpi/test/runcommand-onstart.sh
+sudo wget -O runcommand-onend.sh https://raw.githubusercontent.com/SinisterSpatula/Gpi/test/xboxdrvend.sh
+sudo wget -O runcommand-onstart.sh https://raw.githubusercontent.com/SinisterSpatula/Gpi/test/xboxdrvstart.sh
 sudo chmod a+x *.sh
 cd
 cd /opt/retropie/supplementary/xboxdrv/bin
@@ -119,7 +119,9 @@ sudo reboot
 function update_menu() {
 if validate_url https://raw.githubusercontent.com/SinisterSpatula/Gpi/master/control_updater_menu.sh; then
 cd
-cd ~/RetroPie/retropiemenu
+cd ~/RetroPie/retropiemenu/
+sudo mkdir Controllertools
+cd ~/RetroPie/retropiemenu/Controllertools
 sudo wget -O control_updater_menu.sh https://raw.githubusercontent.com/SinisterSpatula/Gpi/master/control_updater_menu.sh
 sudo chmod 775 control_updater_menu.sh
 sudo chmod a+x *.sh
