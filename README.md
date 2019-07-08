@@ -1,6 +1,6 @@
 # Gpi2 scripts
 
-Install the Xboxdvr from the driver packages in RetroPie-Setup
+Install Xboxdvr from the driver packages in RetroPie-Setup
 
 Enable it and disable it.
 
