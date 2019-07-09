@@ -1,6 +1,6 @@
 # Gpi2 scripts
 
-The goal of Gpi2 is to move away from doing things directly inside of runcommand-onstart.sh  Also, to support both d-pad modes simultaneously.
+The goal of Gpi2 is to move away from doing things directly inside of runcommand-onstart.sh
 
 Install Xboxdrv from the driver packages in RetroPie-Setup
 
