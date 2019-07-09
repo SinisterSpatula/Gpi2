@@ -35,4 +35,4 @@ cd && cd RetroPie/retropiemenu && sudo mkdir Controllertools && wget -O control_
 
 # Switch the D-pad mode of the Gpi case:
 
-The Gpi has a hidden option to change the D-PAD mode. To switch to hat mode (default) press SELECT+DPAD UP for 5 seconds. To switch to joystick/axis mode, press SELECT+DPAD LEFT for 5 seconds. You will know it worked when the LED flashes. The controls in our image are set for the d-pad “hat” mode, so if you find that the d-pad is not working, try switching back to this mode as instructed above.
+The Gpi has a hidden option to change the D-PAD mode. To switch to direct input mode, press SELECT+DPAD LEFT for 5 seconds. You will know it worked when the LED flashes. These controller mappings are configured for d-pad “direct input” mode, so if you find that the d-pad is not working, try switching to this mode as instructed above.  If you need to revert back to facotry D-pad mode: To switch to hat mode (factory) press SELECT+DPAD UP for 5 seconds.
