@@ -80,7 +80,7 @@ fourway="--four-way-restrictor"
 
 invert="--ui-buttonmap du=KEY_DOWN,dd=KEY_UP"
 
-autofire="--autofire A=250, B=250"
+autofire="--autofire A=250,B=250"
 
 ### Stop Music
 stopmusic="sudo pkill -STOP mpg123 > /dev/null 2>&1"
