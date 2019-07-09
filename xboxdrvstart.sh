@@ -80,7 +80,6 @@ fourway="--four-way-restrictor"
 
 invert="--ui-buttonmap du=KEY_DOWN,dd=KEY_UP"
 
-autofire="--autofire A=250,B=250"
 
 ### Stop Music
 stopmusic="sudo pkill -STOP mpg123 > /dev/null 2>&1"
@@ -96,11 +95,13 @@ case $2 in
 		case $rom in
 			"1942.zip"|"1943.zip"|"1944.zip"|"19XX.zip") # Configuration used only for these ROMs
 				$xboxkill && $stopmusic
-				joycommand="$basicGPI $mame4all $autofire &"
+				echo "Your playing 1940"
+				joycommand="$basicGPI $mame4all &"
 				eval $joycommand
 			;;
 			*) # Configuration for every other ROMs on this emulator
 				$xboxkill && $stopmusic
+				echo "Default configs"
 				joycommand="$basicGPI $mame4all &"
 				eval $joycommand
 			;;
@@ -111,11 +112,13 @@ case $2 in
 		case $rom in
 			"1942.zip"|"1943.zip"|"1944.zip"|"19XX.zip") # Configuration used only for these ROMs
 				$xboxkill && $stopmusic
-				joycommand="$basicGPI $pifba $autofire &"
+				echo "your playing 1940"
+				joycommand="$basicGPI $pifba &"
 				eval $joycommand
 			;;
 			*) # Configuration for every other ROMs on this emulator
 				$xboxkill && $stopmusic
+				echo "default configs"
 				joycommand="$basicGPI $pifba &"
 				eval $joycommand
 			;;
