@@ -32,7 +32,7 @@ sudo pkill -CONT mpg123 > /dev/null 2>&1
 # Install the controls_updater_menu
 
 ```shell
-cd && cd RetroPie/retropiemenu && sudo mkdir Controllertools && wget -O control_updater_menu.sh https://raw.githubusercontent.com/SinisterSpatula/Gpi2/master/control_updater_menu.sh && sudo chmod 775 control_updater_menu.sh
+cd && cd RetroPie/retropiemenu && sudo mkdir Controllertools && cd Controllertools && wget -O control_updater_menu.sh https://raw.githubusercontent.com/SinisterSpatula/Gpi2/master/control_updater_menu.sh && sudo chmod 775 control_updater_menu.sh
 ```
 
 # Switch the D-pad mode of the Gpi case:
