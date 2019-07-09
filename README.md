@@ -37,7 +37,7 @@ sudo mkdir -p ~/RetroPie/retropiemenu/Controllertools && cd && cd ~/RetroPie/ret
 
 # Switch the D-pad mode of the Gpi case:
 
-The Gpi has a hidden option to change the D-PAD mode. To switch to direct input mode, press SELECT+DPAD LEFT for 5 seconds. You will know it worked when the LED flashes. These controller mappings are configured for d-pad “direct input” mode, so if you find that the d-pad is not working, try switching to this mode as instructed above.  If you need to revert back to facotry D-pad mode: To switch to hat mode (factory) press SELECT+DPAD UP for 5 seconds.
+The Gpi has a hidden option to change the D-PAD mode. To switch to direct input mode, press SELECT+DPAD LEFT for 5 seconds. You will know it worked when the LED flashes. If you need to revert back to facotry D-pad mode: To switch to hat mode (factory) press SELECT+DPAD UP for 5 seconds.  It does not matter which mode your d-pad is in for these mappings, they work with both modes now.
 
 # Finish Up install
 
