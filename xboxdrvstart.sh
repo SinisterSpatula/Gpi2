@@ -90,7 +90,7 @@ case $2 in
 	
 	mame4all)
 		case $rom in
-			"1942.zip"|"1943.zip"|"1944.zip"|"19XX.zip") # Configuration used only for these ROMs
+			"test1.zip"|"test2.zip"|"test3.zip") # Configuration used only for these ROMs
 				$xboxkill
 				joycommand="$basicGPI $mame4all &"
 				eval $joycommand
@@ -105,7 +105,7 @@ case $2 in
 	
 	pifba)
 		case $rom in
-			"1942.zip"|"1943.zip"|"1944.zip"|"19XX.zip") # Configuration used only for these ROMs
+			"test1.zip"|"test2.zip"|"test3.zip") # Configuration used only for these ROMs
 				$xboxkill
 				joycommand="$basicGPI $pifba &"
 				eval $joycommand
@@ -120,7 +120,7 @@ case $2 in
 	
 	dosbox)
 	case $rom in
-		"amidar.zip"|"atetris.zip"|"puckman.zip") # Configuration used only for these ROMs
+		"test1.zip"|"test2.zip"|"test3.zip") # Configuration used only for these ROMs
 			$xboxkill
 			joycommand="$basicGPI $dosbox &"
 			eval $joycommand
