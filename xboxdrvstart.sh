@@ -150,25 +150,25 @@ case $2 in
 
 	minecraft)
 		$xboxkill && $stopmusic
-		joycommand="basicGPI $minecraft &"
+		joycommand="$basicGPI $minecraft &"
 		eval $joycommand
 	;;
 	
 	daphne)
 		$xboxkill && $stopmusic
-		joycommand="basicGPI $daphne &"
+		joycommand="$basicGPI $daphne &"
 		eval $joycommand
 	;;
 	
 	gpsp)
 		$xboxkill && $stopmusic
-		joycommand="basicGPI $gpsp &"
+		joycommand="$basicGPI $gpsp &"
 		eval $joycommand
 	;;
 	
 	pcsx-rearmed)
 		$xboxkill && $stopmusic
-		joycommand="basicGPI $pcsx &"
+		joycommand="$basicGPI $pcsx &"
 		eval $joycommand
 	;;
 
