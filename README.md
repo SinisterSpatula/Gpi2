@@ -13,7 +13,7 @@ Modify your runcommand-onstart.sh to include the xboxdrv command:
 ```
 #!/bin/sh
 
-bash ./xboxdrvstart.sh $1 $2 $3 > /dev/null 2>&1
+source /opt/retropie/configs/all/xboxdrvstart.sh > /dev/null 2>&1
 sudo pkill -STOP mpg123 > /dev/null 2>&1
 ```
 
@@ -24,7 +24,7 @@ Modify your runcommand-onend.sh to include the xboxdrv command:
 ```
 #!/bin/sh
 
-bash ./xboxdrvend.sh > /dev/null 2>&1
+source /opt/retropie/configs/all/xboxdrvend.sh > /dev/null 2>&1
 sudo pkill -CONT mpg123 > /dev/null 2>&1
 ```
 
