@@ -17,7 +17,7 @@ source /opt/retropie/configs/all/xboxdrvstart.sh > /dev/null 2>&1
 sudo pkill -STOP mpg123 > /dev/null 2>&1
 ```
 
-Modify your runcommand-onend.sh to include the xboxdrv command:
+And then it's time to modify runcommand-onend.sh to include the xboxdrv command:
 
 `sudo nano /opt/retropie/configs/all/runcommand-onend.sh`
 
