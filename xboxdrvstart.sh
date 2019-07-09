@@ -95,13 +95,11 @@ case $2 in
 		case $rom in
 			"1942.zip"|"1943.zip"|"1944.zip"|"19XX.zip") # Configuration used only for these ROMs
 				$xboxkill && $stopmusic
-				echo "Your playing 1940"
 				joycommand="$basicGPI $mame4all &"
 				eval $joycommand
 			;;
 			*) # Configuration for every other ROMs on this emulator
 				$xboxkill && $stopmusic
-				echo "Default configs"
 				joycommand="$basicGPI $mame4all &"
 				eval $joycommand
 			;;
@@ -112,13 +110,11 @@ case $2 in
 		case $rom in
 			"1942.zip"|"1943.zip"|"1944.zip"|"19XX.zip") # Configuration used only for these ROMs
 				$xboxkill && $stopmusic
-				echo "your playing 1940"
 				joycommand="$basicGPI $pifba &"
 				eval $joycommand
 			;;
 			*) # Configuration for every other ROMs on this emulator
 				$xboxkill && $stopmusic
-				echo "default configs"
 				joycommand="$basicGPI $pifba &"
 				eval $joycommand
 			;;
