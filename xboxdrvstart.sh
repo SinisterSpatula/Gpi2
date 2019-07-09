@@ -21,7 +21,7 @@ rom="${3##*/}"
 ### Set variables for your joypad and emulator
 ### Basic Configuraions - Standard controller mappings 
 basicGPI="sudo /opt/retropie/supplementary/xboxdrv/bin/xboxdrv \
-	--evdev --evdev /dev/input/by-id/usb-RetroFlag_GPi_Case_RetroFlag_01-event-joystick \
+    --evdev /dev/input/by-id/usb-RetroFlag_GPi_Case_RetroFlag_01-event-joystick \
     --detach-kernel-driver \
     --silent \
     --force-feedback \
