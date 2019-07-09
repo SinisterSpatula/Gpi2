@@ -94,7 +94,7 @@ case $2 in
 	
 	mame4all)
 		case $rom in
-			"1942.zip"|"1943.zip"|"19XX.zip") # Configuration used only for these ROMs
+			"1942.zip"|"1943.zip"|"1944.zip"|"19XX.zip") # Configuration used only for these ROMs
 				$xboxkill && $stopmusic
 				joycommand="$basicGPI $mame4all $autofire &"
 				eval $joycommand
@@ -109,7 +109,7 @@ case $2 in
 	
 	pifba)
 		case $rom in
-			"1942.zip"|"1943.zip"|"19XX.zip") # Configuration used only for these ROMs
+			"1942.zip"|"1943.zip"|"1944.zip"|"19XX.zip") # Configuration used only for these ROMs
 				$xboxkill && $stopmusic
 				joycommand="$basicGPI $pifba $autofire &"
 				eval $joycommand
