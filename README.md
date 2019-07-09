@@ -42,4 +42,4 @@ The Gpi has a hidden option to change the D-PAD mode. To switch to direct input 
 # Finish Up install
 
 Launch the Controls_Updater_menu and pick option 1.  This will install the rest of the files and get the latest controller mappings.
-  > f you are having trouble finding the Controls_Updater_Menu in your menu, make sure you press start and go to “Other Settings” and make sure “Parse Gamelists Only” is set to OFF. (and restart emulation station, so it will parse and show it).
+  > If you are having trouble finding the Controls_Updater_Menu in your menu, make sure you press start and go to “Other Settings” and make sure “Parse Gamelists Only” is set to OFF. (and restart emulation station, so it will parse and show it).
