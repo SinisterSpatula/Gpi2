@@ -1,3 +1,3 @@
 #!/bin/sh
 
-sudo killall xboxdrv
+sudo killall xboxdrv > /dev/null 2>&1
