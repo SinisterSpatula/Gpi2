@@ -81,9 +81,6 @@ fourway="--four-way-restrictor"
 invert="--ui-buttonmap du=KEY_DOWN,dd=KEY_UP"
 
 
-### Stop Music
-stopmusic="sudo pkill -STOP mpg123 > /dev/null 2>&1"
-
 ### Kill Command
 xboxkill="sudo killall xboxdrv > /dev/null 2>&1"
 
@@ -94,12 +91,12 @@ case $2 in
 	mame4all)
 		case $rom in
 			"1942.zip"|"1943.zip"|"1944.zip"|"19XX.zip") # Configuration used only for these ROMs
-				$xboxkill && $stopmusic
+				$xboxkill
 				joycommand="$basicGPI $mame4all &"
 				eval $joycommand
 			;;
 			*) # Configuration for every other ROMs on this emulator
-				$xboxkill && $stopmusic
+				$xboxkill
 				joycommand="$basicGPI $mame4all &"
 				eval $joycommand
 			;;
@@ -109,12 +106,12 @@ case $2 in
 	pifba)
 		case $rom in
 			"1942.zip"|"1943.zip"|"1944.zip"|"19XX.zip") # Configuration used only for these ROMs
-				$xboxkill && $stopmusic
+				$xboxkill
 				joycommand="$basicGPI $pifba &"
 				eval $joycommand
 			;;
 			*) # Configuration for every other ROMs on this emulator
-				$xboxkill && $stopmusic
+				$xboxkill
 				joycommand="$basicGPI $pifba &"
 				eval $joycommand
 			;;
@@ -124,12 +121,12 @@ case $2 in
 	dosbox)
 	case $rom in
 		"amidar.zip"|"atetris.zip"|"puckman.zip") # Configuration used only for these ROMs
-			$xboxkill && $stopmusic
+			$xboxkill
 			joycommand="$basicGPI $dosbox &"
 			eval $joycommand
 		;;
 		*) # Configuration for every other ROMs on this emulator
-			$xboxkill && $stopmusic
+			$xboxkill
 			joycommand="$basicGPI $dosbox &"
 			eval $joycommand
 		;;
@@ -137,37 +134,37 @@ case $2 in
 	;;
 
 	eduke32)
-		$xboxkill && $stopmusic
+		$xboxkill
 		joycommand="$basicGPI $eduke32 &"
 		eval $joycommand
 	;;
 	
 	openbor)
-		$xboxkill && $stopmusic
+		$xboxkill
 		joycommand="$basicGPI $openbor &"
 		eval $joycommand
 	;;
 
 	minecraft)
-		$xboxkill && $stopmusic
+		$xboxkill
 		joycommand="$basicGPI $minecraft &"
 		eval $joycommand
 	;;
 	
 	daphne)
-		$xboxkill && $stopmusic
+		$xboxkill
 		joycommand="$basicGPI $daphne &"
 		eval $joycommand
 	;;
 	
 	gpsp)
-		$xboxkill && $stopmusic
+		$xboxkill
 		joycommand="$basicGPI $gpsp &"
 		eval $joycommand
 	;;
 	
 	pcsx-rearmed)
-		$xboxkill && $stopmusic
+		$xboxkill
 		joycommand="$basicGPI $pcsx &"
 		eval $joycommand
 	;;
