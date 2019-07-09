@@ -1,6 +1,6 @@
 # Gpi2 scripts
 
-The goal of Gpi2 is to move away from doing things directly inside of runcommand-onstart.sh
+The goal of Gpi2 is to move away from doing things directly inside of runcommand-onstart.sh  These xboxdrv controller scripts greatly enhance the capabilities of your Gpi Case.  They can provide many virtual buttons using a button as a modifier.  (In effect, it can turn the six button control scheme into a 12 button one!)
 
 Install Xboxdrv from the driver packages in RetroPie-Setup
 
