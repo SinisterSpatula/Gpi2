@@ -1,1 +1,2 @@
-SUBSYSTEM=="input", ATTRS{name}=="Microsoft X-Box 360 pad - Keyboard Emulation", GROUP="users", MODE="0666", ENV{ID_INPUT_KEYBOARD}="1"
+# THIS IS CURRENTLY NOT NEEDED / NOT USED
+# SUBSYSTEM=="input", ATTRS{name}=="Microsoft X-Box 360 pad - Keyboard Emulation", GROUP="users", MODE="0666", ENV{ID_INPUT_KEYBOARD}="1"
