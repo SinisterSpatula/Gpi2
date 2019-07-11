@@ -164,6 +164,12 @@ case $2 in
 		joycommand="$basicGPI $openbor &"
 		eval $joycommand
 	;;
+	
+	openbor-6xxx)
+		$xboxkill
+		joycommand="$basicGPI $openbor &"
+		eval $joycommand
+	;;
 
 	minecraft)
 		$xboxkill
