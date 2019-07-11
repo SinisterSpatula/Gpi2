@@ -52,6 +52,10 @@ openbor="--ui-buttonmap x=KEY_Z,a=KEY_D,b=KEY_A,Y=KEY_S+KEY_F,lb=KEY_L,rb=KEY_R 
 mame4all="--ui-buttonmap start=KEY_1,back=KEY_5,back+start=KEY_ESC \
     --ui-buttonmap a=KEY_LEFTCTRL,b=KEY_LEFTALT,x=KEY_SPACE,y=KEY_LEFTSHIFT,lb=KEY_Z,rb=KEY_X \
     --ui-buttonmap du=KEY_UP,dd=KEY_DOWN,dl=KEY_LEFT,dr=KEY_RIGHT,y+lb=KEY_TAB,y+rb=KEY_ENTER"
+    
+advmame94="--ui-buttonmap start=KEY_1,back=KEY_5,back+start=KEY_ESC \
+    --ui-buttonmap a=KEY_LEFTCTRL,b=KEY_LEFTALT,x=KEY_SPACE,y=KEY_LEFTSHIFT,lb=KEY_Z,rb=KEY_X \
+    --ui-buttonmap du=KEY_UP,dd=KEY_DOWN,dl=KEY_LEFT,dr=KEY_RIGHT,y+lb=KEY_TAB,y+rb=KEY_ENTER"
 	
 pifba="--ui-buttonmap b=KEY_LEFTCTRL,y=KEY_SPACE,a=KEY_LEFTALT,x=KEY_LEFTSHIFT,lb=KEY_Z,rb=KEY_X \
     --ui-buttonmap start=KEY_ENTER,back=KEY_TAB,back+start=KEY_ESC \
@@ -114,6 +118,21 @@ case $2 in
 			*) # Configuration for every other ROMs on this emulator
 				$xboxkill
 				joycommand="$basicGPI $pifba &"
+				eval $joycommand
+			;;
+		esac
+	;;
+	
+		advmame-0.94)
+		case $rom in
+			"test1.zip"|"test2.zip"|"test3.zip") # Configuration used only for these ROMs
+				$xboxkill
+				joycommand="$basicGPI $advmame94 &"
+				eval $joycommand
+			;;
+			*) # Configuration for every other ROMs on this emulator
+				$xboxkill
+				joycommand="$basicGPI $advmame94 &"
 				eval $joycommand
 			;;
 		esac
