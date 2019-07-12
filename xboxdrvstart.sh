@@ -45,8 +45,8 @@ eduke32="--ui-buttonmap x=KEY_RIGHTCTRL,a=KEY_E,b=KEY_SPACE,y=KEY_LEFTSHIFT,lb=K
     --ui-buttonmap du=KEY_UP+KEY_W,du+a=rel:REL_Y:-5:5,a+du=rel:REL_Y:-5:5,dd=KEY_DOWN+KEY_S,dd+a=rel:REL_Y:5:5,a+dd=rel:REL_Y:5:5,dl=KEY_LEFT,dr=KEY_RIGHT \
     --ui-buttonmap start+y=KEY_J,start+b=KEY_N,start+x=KEY_H,start+a=KEY_TAB"
 
-openbor="--ui-buttonmap x=KEY_Z,a=KEY_D,b=KEY_A,Y=KEY_S+KEY_F,lb=KEY_L,rb=KEY_R \
-    --ui-buttonmap start=KEY_ENTER,back=KEY_BACKSPACE,back+start=KEY_ESC \
+openbor="--ui-buttonmap x=void,a=KEY_D,b=KEY_A,Y=KEY_S,lb=KEY_L,rb=KEY_R \
+    --ui-buttonmap start=KEY_ENTER,back=KEY_BACKSPACE,back+start=KEY_F10 \
     --ui-buttonmap du=KEY_UP,dd=KEY_DOWN,dl=KEY_LEFT,dr=KEY_RIGHT"
 
 mame4all="--ui-buttonmap start=KEY_1,back=KEY_5,back+start=KEY_ESC \
