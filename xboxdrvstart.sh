@@ -40,6 +40,10 @@ basicGPI="sudo /opt/retropie/supplementary/xboxdrv/bin/xboxdrv \
 ### Extended Configurations
 ### Specific emulator configuration or any other parameters you will need only for some emulators
 
+peplus="--ui-buttonmap start=KEY_T+KEY_ENTER,back=KEY_6,back+start=KEY_ESC \
+    --ui-buttonmap b=KEY_Q+KEY_W,a=KEY_B,x=KEY_V,y=KEY_C,lb=KEY_Z,rb=KEY_X \
+    --ui-buttonmap du=KEY_Z+KEY_UP,dd=KEY_DOWN,dl=KEY_LEFT,dr=KEY_X+KEY_RIGHT,y+lb=KEY_TAB,y+rb=KEY_ENTER"
+
 eduke32="--ui-buttonmap x=KEY_RIGHTCTRL,a=KEY_E,b=KEY_SPACE,y=KEY_LEFTSHIFT,lb=KEY_A,rb=KEY_D,a+lb=KEY_SEMICOLON,a+rb=KEY_APOSTROPHE,lb+rb=KEY_LEFTCTRL,rb+lb=KEY_LEFTCTRL \
     --ui-buttonmap start=KEY_ENTER+KEY_M,back=KEY_ESC,back+start=KEY_F10 \
     --ui-buttonmap du=KEY_UP+KEY_W,du+a=rel:REL_Y:-5:5,a+du=rel:REL_Y:-5:5,dd=KEY_DOWN+KEY_S,dd+a=rel:REL_Y:5:5,a+dd=rel:REL_Y:5:5,dl=KEY_LEFT,dr=KEY_RIGHT \
@@ -93,6 +97,21 @@ xboxkill="sudo killall xboxdrv > /dev/null 2>&1"
 # $2 is the name of the core
 case $2 in
 	
+	lr-mame2016)
+		case $rom in
+			"pexm001.zip"|"test2.zip"|"test3.zip") # Configuration used only for these ROMs
+				$xboxkill
+				joycommand="$basicGPI $peplus &"
+				eval $joycommand
+			;;
+			*) # Configuration for every other ROMs on this emulator
+				$xboxkill
+				# joycommand="$basicGPI $mame2016 &"
+				# eval $joycommand
+			;;
+		esac
+	;;
+
 	mame4all)
 		case $rom in
 			"test1.zip"|"test2.zip"|"test3.zip") # Configuration used only for these ROMs
