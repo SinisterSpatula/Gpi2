@@ -40,7 +40,7 @@ basicGPI="sudo /opt/retropie/supplementary/xboxdrv/bin/xboxdrv \
 ### Extended Configurations
 ### Specific emulator configuration or any other parameters you will need only for some emulators
 
-peplus="--ui-buttonmap start=KEY_T+KEY_ENTER,back=KEY_6,back+start=KEY_ESC \
+peplus="--ui-buttonmap start=KEY_T+KEY_ENTER,back=KEY_6,back+start=exec:/opt/retropie/supplementary/xboxdrv/bin/quit.sh \
     --ui-buttonmap b=KEY_Q+KEY_W,a=KEY_B,x=KEY_V,y=KEY_C,lb=KEY_Z,rb=KEY_X \
     --ui-buttonmap du=KEY_Z+KEY_UP,dd=KEY_DOWN,dl=KEY_LEFT,dr=KEY_X+KEY_RIGHT,y+lb=KEY_TAB,y+rb=KEY_ENTER"
 
