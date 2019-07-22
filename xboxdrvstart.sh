@@ -128,7 +128,7 @@ case $2 in
 		esac
 	;;
 	
-		advmame-0.94)
+	advmame-0.94)
 		case $rom in
 			"test1.zip"|"test2.zip"|"test3.zip") # Configuration used only for these ROMs
 				$xboxkill
