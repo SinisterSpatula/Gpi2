@@ -40,21 +40,22 @@ basicGPI="sudo /opt/retropie/supplementary/xboxdrv/bin/xboxdrv \
 ### Extended Configurations
 ### Specific emulator configuration or any other parameters you will need only for some emulators
 
+
 eduke32="--ui-buttonmap x=KEY_RIGHTCTRL,a=KEY_E,b=KEY_SPACE,y=KEY_LEFTSHIFT,lb=KEY_A,rb=KEY_D,a+lb=KEY_SEMICOLON,a+rb=KEY_APOSTROPHE,lb+rb=KEY_LEFTCTRL,rb+lb=KEY_LEFTCTRL \
     --ui-buttonmap start=KEY_ENTER+KEY_M,back=KEY_ESC,back+start=KEY_F10 \
     --ui-buttonmap du=KEY_UP+KEY_W,du+a=rel:REL_Y:-5:5,a+du=rel:REL_Y:-5:5,dd=KEY_DOWN+KEY_S,dd+a=rel:REL_Y:5:5,a+dd=rel:REL_Y:5:5,dl=KEY_LEFT,dr=KEY_RIGHT \
     --ui-buttonmap start+y=KEY_J,start+b=KEY_N,start+x=KEY_H,start+a=KEY_TAB"
 
-openbor="--ui-buttonmap x=KEY_Z,a=KEY_D,b=KEY_A,Y=KEY_S+KEY_F,lb=KEY_L,rb=KEY_R \
-    --ui-buttonmap start=KEY_ENTER,back=KEY_BACKSPACE,back+start=KEY_ESC \
+openbor="--ui-buttonmap x=void,a=KEY_D,b=KEY_A,Y=KEY_S,lb=KEY_L,rb=KEY_R \
+    --ui-buttonmap start=KEY_ENTER,back=KEY_BACKSPACE,back+start=KEY_F10 \
     --ui-buttonmap du=KEY_UP,dd=KEY_DOWN,dl=KEY_LEFT,dr=KEY_RIGHT"
 
 mame4all="--ui-buttonmap start=KEY_1,back=KEY_5,back+start=KEY_ESC \
-    --ui-buttonmap a=KEY_LEFTCTRL,b=KEY_LEFTALT,x=KEY_SPACE,y=KEY_LEFTSHIFT,lb=KEY_Z,rb=KEY_X \
+    --ui-buttonmap b=KEY_LEFTCTRL,a=KEY_LEFTALT,x=KEY_SPACE,y=KEY_LEFTSHIFT,lb=KEY_Z,rb=KEY_X \
     --ui-buttonmap du=KEY_UP,dd=KEY_DOWN,dl=KEY_LEFT,dr=KEY_RIGHT,y+lb=KEY_TAB,y+rb=KEY_ENTER"
     
 advmame94="--ui-buttonmap start=KEY_1+KEY_ENTER,back=KEY_5,back+start=KEY_ESC \
-    --ui-buttonmap a=KEY_LEFTCTRL,b=KEY_LEFTALT,x=KEY_SPACE,y=KEY_LEFTSHIFT,lb=KEY_Z,rb=KEY_X \
+    --ui-buttonmap b=KEY_LEFTCTRL,a=KEY_LEFTALT,x=KEY_SPACE,y=KEY_LEFTSHIFT,lb=KEY_Z,rb=KEY_X \
     --ui-buttonmap du=KEY_UP,dd=KEY_DOWN,dl=KEY_LEFT,dr=KEY_RIGHT,y+lb=KEY_TAB,y+rb=KEY_ENTER"
 	
 pifba="--ui-buttonmap b=KEY_LEFTCTRL,y=KEY_SPACE,a=KEY_LEFTALT,x=KEY_LEFTSHIFT,lb=KEY_Z,rb=KEY_X \
@@ -73,6 +74,10 @@ daphne="--ui-buttonmap x=KEY_LEFTSHIFT,a=KEY_LEFTCTRL,b=KEY_LEFTALT \
     --ui-buttonmap start=KEY_1,back=KEY_5,back+start=KEY_ESC \
     --ui-buttonmap du=KEY_UP,dd=KEY_DOWN,dl=KEY_LEFT,dr=KEY_RIGHT"
 
+mpv="--ui-buttonmap x=KEY_PAGEDOWN,a=KEY_P,b=KEY_M,y=KEY_PAGEUP,lb=KEY_J,rb=KEY_V \
+    --ui-buttonmap start=KEY_0,back=KEY_9,back+start=KEY_Q \
+    --ui-buttonmap du=KEY_UP,dd=KEY_DOWN,dl=KEY_LEFT,dr=KEY_RIGHT"
+
 gpsp="--ui-buttonmap x=KEY_S,a=KEY_Z,b=KEY_X,lb=KEY_A,Y=KEY_A,rb=KEY_S \
     --ui-buttonmap start=KEY_ENTER,back=KEY_BACKSPACE,back+x=KEY_F10,back+start=KEY_ESC \
     --ui-buttonmap du=KEY_UP,dd=KEY_DOWN,dl=KEY_LEFT,dr=KEY_RIGHT"
@@ -83,7 +88,12 @@ pcsx="--ui-buttonmap x=KEY_D,a=KEY_X,b=KEY_Z+KEY_ENTER,Y=KEY_S,lb=KEY_W,y+lb=KEY
 
 fourway="--four-way-restrictor"
 
-invert="--ui-buttonmap du=KEY_DOWN,dd=KEY_UP"
+invert=""
+
+# If rom name contains '(inverted)' we will invert controls.
+if [[ $rom == *"(inverted)"* ]]; then
+  invert="--ui-buttonmap du=KEY_DOWN,dd=KEY_UP"
+fi
 
 
 ### Kill Command
@@ -92,17 +102,17 @@ xboxkill="sudo killall xboxdrv > /dev/null 2>&1"
 ### Execute the driver with the configuration you need
 # $2 is the name of the core
 case $2 in
-	
+
 	mame4all)
 		case $rom in
 			"test1.zip"|"test2.zip"|"test3.zip") # Configuration used only for these ROMs
 				$xboxkill
-				joycommand="$basicGPI $mame4all &"
+				joycommand="$basicGPI $mame4all $invert &"
 				eval $joycommand
 			;;
 			*) # Configuration for every other ROMs on this emulator
 				$xboxkill
-				joycommand="$basicGPI $mame4all &"
+				joycommand="$basicGPI $mame4all $invert &"
 				eval $joycommand
 			;;
 		esac
@@ -112,27 +122,27 @@ case $2 in
 		case $rom in
 			"test1.zip"|"test2.zip"|"test3.zip") # Configuration used only for these ROMs
 				$xboxkill
-				joycommand="$basicGPI $pifba &"
+				joycommand="$basicGPI $pifba $invert &"
 				eval $joycommand
 			;;
 			*) # Configuration for every other ROMs on this emulator
 				$xboxkill
-				joycommand="$basicGPI $pifba &"
+				joycommand="$basicGPI $pifba $invert &"
 				eval $joycommand
 			;;
 		esac
 	;;
 	
-		advmame-0.94)
+	advmame-0.94)
 		case $rom in
 			"test1.zip"|"test2.zip"|"test3.zip") # Configuration used only for these ROMs
 				$xboxkill
-				joycommand="$basicGPI $advmame94 &"
+				joycommand="$basicGPI $advmame94 $invert &"
 				eval $joycommand
 			;;
 			*) # Configuration for every other ROMs on this emulator
 				$xboxkill
-				joycommand="$basicGPI $advmame94 &"
+				joycommand="$basicGPI $advmame94 $invert &"
 				eval $joycommand
 			;;
 		esac
@@ -142,12 +152,12 @@ case $2 in
 	case $rom in
 		"test1.zip"|"test2.zip"|"test3.zip") # Configuration used only for these ROMs
 			$xboxkill
-			joycommand="$basicGPI $dosbox &"
+			joycommand="$basicGPI $dosbox $invert &"
 			eval $joycommand
 		;;
 		*) # Configuration for every other ROMs on this emulator
 			$xboxkill
-			joycommand="$basicGPI $dosbox &"
+			joycommand="$basicGPI $dosbox $invert &"
 			eval $joycommand
 		;;
 		esac
@@ -155,43 +165,49 @@ case $2 in
 
 	eduke32)
 		$xboxkill
-		joycommand="$basicGPI $eduke32 &"
+		joycommand="$basicGPI $eduke32 $invert &"
 		eval $joycommand
 	;;
 	
 	openbor)
 		$xboxkill
-		joycommand="$basicGPI $openbor &"
+		joycommand="$basicGPI $openbor $invert &"
 		eval $joycommand
 	;;
 	
 	openbor-6xxx)
 		$xboxkill
-		joycommand="$basicGPI $openbor &"
+		joycommand="$basicGPI $openbor $invert &"
 		eval $joycommand
 	;;
 
 	minecraft)
 		$xboxkill
-		joycommand="$basicGPI $minecraft &"
+		joycommand="$basicGPI $minecraft $invert &"
 		eval $joycommand
 	;;
 	
 	daphne)
 		$xboxkill
-		joycommand="$basicGPI $daphne &"
+		joycommand="$basicGPI $daphne $invert &"
+		eval $joycommand
+	;;
+	
+	mpv)
+		$xboxkill
+		joycommand="$basicGPI $mpv $invert &"
 		eval $joycommand
 	;;
 	
 	gpsp)
 		$xboxkill
-		joycommand="$basicGPI $gpsp &"
+		joycommand="$basicGPI $gpsp $invert &"
 		eval $joycommand
 	;;
 	
 	pcsx-rearmed)
 		$xboxkill
-		joycommand="$basicGPI $pcsx &"
+		joycommand="$basicGPI $pcsx $invert &"
 		eval $joycommand
 	;;
 
