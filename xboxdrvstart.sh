@@ -74,7 +74,7 @@ daphne="--ui-buttonmap x=KEY_LEFTSHIFT,a=KEY_LEFTCTRL,b=KEY_LEFTALT \
     --ui-buttonmap start=KEY_1,back=KEY_5,back+start=KEY_ESC \
     --ui-buttonmap du=KEY_UP,dd=KEY_DOWN,dl=KEY_LEFT,dr=KEY_RIGHT"
 
-mpv="--ui-buttonmap x=KEY_PAGEDOWN,a=KEY_P,b=KEY_LEFTALT,y=KEY_PAGEUP \
+mpv="--ui-buttonmap x=KEY_PAGEDOWN,a=KEY_P,b=KEY_LEFTALT,y=KEY_PAGEUP,lb=KEY_J,rb=KEY_V \
     --ui-buttonmap start=KEY_0,back=KEY_9,back+start=KEY_Q \
     --ui-buttonmap du=KEY_UP,dd=KEY_DOWN,dl=KEY_LEFT,dr=KEY_RIGHT"
 
