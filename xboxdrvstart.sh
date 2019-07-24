@@ -88,12 +88,7 @@ pcsx="--ui-buttonmap x=KEY_D,a=KEY_X,b=KEY_Z+KEY_ENTER,Y=KEY_S,lb=KEY_W,y+lb=KEY
 
 fourway="--four-way-restrictor"
 
-invert=""
-
-# If rom name contains '(inverted)' we will invert controls.
-if [[ $rom == *"(inverted)"* ]]; then
-  invert="--ui-buttonmap du=KEY_DOWN,dd=KEY_UP"
-fi
+invert="--ui-buttonmap du=KEY_DOWN,dd=KEY_UP"
 
 
 ### Kill Command
@@ -107,12 +102,12 @@ case $2 in
 		case $rom in
 			"test1.zip"|"test2.zip"|"test3.zip") # Configuration used only for these ROMs
 				$xboxkill
-				joycommand="$basicGPI $mame4all $invert &"
+				joycommand="$basicGPI $mame4all &"
 				eval $joycommand
 			;;
 			*) # Configuration for every other ROMs on this emulator
 				$xboxkill
-				joycommand="$basicGPI $mame4all $invert &"
+				joycommand="$basicGPI $mame4all &"
 				eval $joycommand
 			;;
 		esac
@@ -122,12 +117,12 @@ case $2 in
 		case $rom in
 			"test1.zip"|"test2.zip"|"test3.zip") # Configuration used only for these ROMs
 				$xboxkill
-				joycommand="$basicGPI $pifba $invert &"
+				joycommand="$basicGPI $pifba &"
 				eval $joycommand
 			;;
 			*) # Configuration for every other ROMs on this emulator
 				$xboxkill
-				joycommand="$basicGPI $pifba $invert &"
+				joycommand="$basicGPI $pifba &"
 				eval $joycommand
 			;;
 		esac
@@ -137,12 +132,12 @@ case $2 in
 		case $rom in
 			"test1.zip"|"test2.zip"|"test3.zip") # Configuration used only for these ROMs
 				$xboxkill
-				joycommand="$basicGPI $advmame94 $invert &"
+				joycommand="$basicGPI $advmame94 &"
 				eval $joycommand
 			;;
 			*) # Configuration for every other ROMs on this emulator
 				$xboxkill
-				joycommand="$basicGPI $advmame94 $invert &"
+				joycommand="$basicGPI $advmame94 &"
 				eval $joycommand
 			;;
 		esac
@@ -152,12 +147,12 @@ case $2 in
 	case $rom in
 		"test1.zip"|"test2.zip"|"test3.zip") # Configuration used only for these ROMs
 			$xboxkill
-			joycommand="$basicGPI $dosbox $invert &"
+			joycommand="$basicGPI $dosbox &"
 			eval $joycommand
 		;;
 		*) # Configuration for every other ROMs on this emulator
 			$xboxkill
-			joycommand="$basicGPI $dosbox $invert &"
+			joycommand="$basicGPI $dosbox &"
 			eval $joycommand
 		;;
 		esac
@@ -165,49 +160,49 @@ case $2 in
 
 	eduke32)
 		$xboxkill
-		joycommand="$basicGPI $eduke32 $invert &"
+		joycommand="$basicGPI $eduke32 &"
 		eval $joycommand
 	;;
 	
 	openbor)
 		$xboxkill
-		joycommand="$basicGPI $openbor $invert &"
+		joycommand="$basicGPI $openbor &"
 		eval $joycommand
 	;;
 	
 	openbor-6xxx)
 		$xboxkill
-		joycommand="$basicGPI $openbor $invert &"
+		joycommand="$basicGPI $openbor &"
 		eval $joycommand
 	;;
 
 	minecraft)
 		$xboxkill
-		joycommand="$basicGPI $minecraft $invert &"
+		joycommand="$basicGPI $minecraft &"
 		eval $joycommand
 	;;
 	
 	daphne)
 		$xboxkill
-		joycommand="$basicGPI $daphne $invert &"
+		joycommand="$basicGPI $daphne &"
 		eval $joycommand
 	;;
 	
 	mpv)
 		$xboxkill
-		joycommand="$basicGPI $mpv $invert &"
+		joycommand="$basicGPI $mpv &"
 		eval $joycommand
 	;;
 	
 	gpsp)
 		$xboxkill
-		joycommand="$basicGPI $gpsp $invert &"
+		joycommand="$basicGPI $gpsp &"
 		eval $joycommand
 	;;
 	
 	pcsx-rearmed)
 		$xboxkill
-		joycommand="$basicGPI $pcsx $invert &"
+		joycommand="$basicGPI $pcsx &"
 		eval $joycommand
 	;;
 
