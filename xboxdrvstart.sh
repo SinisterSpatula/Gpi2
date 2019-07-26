@@ -40,6 +40,10 @@ basicGPI="sudo /opt/retropie/supplementary/xboxdrv/bin/xboxdrv \
 ### Extended Configurations
 ### Specific emulator configuration or any other parameters you will need only for some emulators
 
+#Streets of Rage remix
+sorr="--ui-buttonmap x=KEY_V,a=KEY_S,b=KEY_C,Y=KEY_X,lb=KEY_D,rb=KEY_B,lb+rb=KEY_A,rb+lb=KEY_A \
+    --ui-buttonmap start=KEY_ENTER,back=KEY_ESC \
+    --ui-buttonmap du=KEY_UP,dd=KEY_DOWN,dl=KEY_LEFT,dr=KEY_RIGHT"
 
 eduke32="--ui-buttonmap x=KEY_RIGHTCTRL,a=KEY_E,b=KEY_SPACE,y=KEY_LEFTSHIFT,lb=KEY_A,rb=KEY_D,a+lb=KEY_SEMICOLON,a+rb=KEY_APOSTROPHE,lb+rb=KEY_LEFTCTRL,rb+lb=KEY_LEFTCTRL \
     --ui-buttonmap start=KEY_ENTER+KEY_M,back=KEY_ESC,back+start=KEY_F10 \
@@ -174,6 +178,12 @@ case $2 in
 	openbor-6xxx)
 		$xboxkill
 		joycommand="$basicGPI $openbor &"
+		eval $joycommand
+	;;
+	
+	sorr)
+		$xboxkill
+		joycommand="$basicGPI $sorr &"
 		eval $joycommand
 	;;
 
