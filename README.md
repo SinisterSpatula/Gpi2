@@ -28,3 +28,4 @@ You also need to have xboxdrv installed (if it isn't already).  [See the Guide h
 
 * [Our guide located here](https://sinisterspatula.github.io/SuperRetropieGuides/Controls_Updater_Menu)
 
+* If you have suggestions for improving these control maps, please [add your comments or questions here.](https://github.com/SinisterSpatula/Gpi2/issues/2)
