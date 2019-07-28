@@ -2,7 +2,7 @@
 
 These xboxdrv controller scripts greatly enhance the capabilities of your Gpi Case.  They can provide many virtual buttons using a button as a modifier.  (In effect, it can turn the six button control scheme into a 12 button one!)  It also helps by mapping controls to keyboard keys for emulators that lack the ability to interface with the Gpi case controls (some of the standalone non-libretro cores).
 
-# To migrate to the new framework
+# To migrate to or to install the new framework:
 
 ## Update the menu
 
