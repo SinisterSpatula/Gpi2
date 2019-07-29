@@ -40,6 +40,11 @@ basicGPI="sudo /opt/retropie/supplementary/xboxdrv/bin/xboxdrv \
 ### Extended Configurations
 ### Specific emulator configuration or any other parameters you will need only for some emulators
 
+#Outrun Engine
+cannonball="--ui-buttonmap x=KEY_V,a=KEY_B,b=KEY_A,Y=KEY_G \
+    --ui-buttonmap start=KEY_ENTER,back=KEY_1,back+start=KEY_ESC \
+    --ui-buttonmap du=KEY_UP,dd=KEY_DOWN,dl=KEY_LEFT,dr=KEY_RIGHT"
+    
 #Streets of Rage remix
 sorr="--ui-buttonmap x=KEY_V,a=KEY_S,b=KEY_C,Y=KEY_X,lb=KEY_D,rb=KEY_B,lb+rb=KEY_A,rb+lb=KEY_A \
     --ui-buttonmap start=KEY_ENTER,back=KEY_ESC \
@@ -184,6 +189,12 @@ case $2 in
 	sorr)
 		$xboxkill
 		joycommand="$basicGPI $sorr &"
+		eval $joycommand
+	;;
+
+	cannonball)
+		$xboxkill
+		joycommand="$basicGPI $cannonball &"
 		eval $joycommand
 	;;
 
