@@ -110,9 +110,9 @@ case $2 in
 
 	mame4all)
 		case $rom in
-			"test1.zip"|"test2.zip"|"test3.zip") # Configuration used only for these ROMs
+			"btimem.zip"|"pacmanm.zip"|"mspacman.zip") # Configuration used only for these ROMs
 				$xboxkill
-				joycommand="$basicGPI $mame4all &"
+				joycommand="$basicGPI $fourway $mame4all &"
 				eval $joycommand
 			;;
 			*) # Configuration for every other ROMs on this emulator
