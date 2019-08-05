@@ -4,10 +4,10 @@
 #echo $1 >> /dev/shm/runcommand.log
 
 ## Name of the software used for running the emulation
-#echo $2 >> /dev/shm/runcommand.log
+echo "2 is "$2 >> /dev/shm/runcommand.log
 
 ## Name of the rom
-#echo $3 >> /dev/shm/runcommand.log
+echo "3 is "$3 >> /dev/shm/runcommand.log
 
 ##Executed command line
 #echo $4 >> /dev/shm/runcommand.log
@@ -16,6 +16,8 @@
 ### The FUN begins
 #Get ROM name striping full path
 rom="${3##*/}"
+
+echo "rom is "$rom >> /dev/shm/runcommand.log
 
 
 ### Set variables for your joypad and emulator
@@ -68,6 +70,10 @@ advmame94="--ui-buttonmap start=KEY_1+KEY_ENTER,back=KEY_5,back+start=KEY_ESC \
     --ui-buttonmap du=KEY_UP,dd=KEY_DOWN,dl=KEY_LEFT,dr=KEY_RIGHT,y+lb=KEY_TAB,y+rb=KEY_ENTER"
 	
 pifba="--ui-buttonmap b=KEY_LEFTCTRL,y=KEY_SPACE,a=KEY_LEFTALT,x=KEY_LEFTSHIFT,lb=KEY_Z,rb=KEY_X \
+    --ui-buttonmap start=KEY_ENTER,back=KEY_TAB,back+start=KEY_ESC \
+    --ui-buttonmap du=KEY_UP,dd=KEY_DOWN,dl=KEY_LEFT,dr=KEY_RIGHT"
+
+fbacapcom="--ui-buttonmap b=KEY_LEFTSHIFT,y=KEY_LEFTCTRL,a=KEY_Z,x=KEY_LEFTALT,lb=KEY_SPACE,rb=KEY_X \
     --ui-buttonmap start=KEY_ENTER,back=KEY_TAB,back+start=KEY_ESC \
     --ui-buttonmap du=KEY_UP,dd=KEY_DOWN,dl=KEY_LEFT,dr=KEY_RIGHT"
 	
@@ -125,9 +131,9 @@ case $2 in
 	
 	pifba)
 		case $rom in
-			"test1.zip"|"test2.zip"|"test3.zip") # Configuration used only for these ROMs
+			"cybots.zip"|"dstlk.zip"|"msh.zip"|"mshvsf.zip"|"mvsc.zip"|"nwarr.zip"|"sfa2.zip"|"sfa3.zip"|"sfa.zip"|"sf2ce.zip"|"sf2hf.zip"|"sf2.zip"|"sgemf.zip"|"ssf2t.zip"|"ssf2.zip"|"vhunt2.zip"|"vsav2.zip"|"vsav.zip"|"xmvsf.zip"|"xmcota.zip") # Configuration used only for these ROMs
 				$xboxkill
-				joycommand="$basicGPI $pifba &"
+				joycommand="$basicGPI $fbacapcom &"
 				eval $joycommand
 			;;
 			*) # Configuration for every other ROMs on this emulator
