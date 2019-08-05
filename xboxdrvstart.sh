@@ -42,11 +42,6 @@ basicGPI="sudo /opt/retropie/supplementary/xboxdrv/bin/xboxdrv \
 ### Extended Configurations
 ### Specific emulator configuration or any other parameters you will need only for some emulators
 
-#Nkaruga - fan made Ikaruga spin off game.
-nkaruga="--ui-buttonmap x=KEY_P,a=KEY_O,b=KEY_I,Y=KEY_P,lb=KEY_O,rb=KEY_O \
-    --ui-buttonmap start=KEY_M,back=KEY_M,back+start=KEY_ESC \
-    --ui-buttonmap du=KEY_W,dd=KEY_S,dl=KEY_A,dr=KEY_D"
-
 #Outrun Engine
 cannonball="--ui-buttonmap x=KEY_V,a=KEY_B,b=KEY_A,Y=KEY_G \
     --ui-buttonmap start=KEY_ENTER,back=KEY_1,back+start=KEY_ESC \
@@ -177,12 +172,6 @@ case $2 in
 			eval $joycommand
 		;;
 		esac
-	;;
-
-	nkaruga)
-		$xboxkill
-		joycommand="$basicGPI $nkaruga &"
-		eval $joycommand
 	;;
 
 	eduke32)
