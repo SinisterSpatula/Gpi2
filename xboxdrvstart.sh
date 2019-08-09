@@ -1,7 +1,7 @@
 #!/bin/sh
 ## Uncomment one or all of the following if you need to find some information about the emulator or roms
 ## Name of the emulator
-#echo $1 >> /dev/shm/runcommand.log
+echo "1 is "$1 >> /dev/shm/runcommand.log
 
 ## Name of the software used for running the emulation
 echo "2 is "$2 >> /dev/shm/runcommand.log
@@ -14,7 +14,7 @@ echo "3 is "$3 >> /dev/shm/runcommand.log
 
 ## Find the Retroflag Joystick name
 joystick=`find /dev/input/by-id/ -name "*event-joystick*"`
-# echo "I found the joystick as: "$joystick >> /dev/shm/runcommand.log
+echo "Detected joystick as: "$joystick >> /dev/shm/runcommand.log
 
 
 
