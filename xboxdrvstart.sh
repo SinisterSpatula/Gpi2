@@ -12,6 +12,11 @@ echo "3 is "$3 >> /dev/shm/runcommand.log
 ##Executed command line
 #echo $4 >> /dev/shm/runcommand.log
 
+## Find the Retroflag Joystick name
+joystick=`find /dev/input/by-id/ -name "*event-joystick*"`
+# echo "I found the joystick as: "$joystick >> /dev/shm/runcommand.log
+
+
 
 ### The FUN begins
 #Get ROM name striping full path
@@ -23,7 +28,7 @@ echo "rom is "$rom >> /dev/shm/runcommand.log
 ### Set variables for your joypad and emulator
 ### Basic Configuraions - Standard controller mappings 
 basicGPI="sudo /opt/retropie/supplementary/xboxdrv/bin/xboxdrv \
-    --evdev /dev/input/by-id/usb-RetroFlag_GPi_Case_RetroFlag_01-event-joystick \
+    --evdev /dev/input/by-id/$joystick \
     --detach-kernel-driver \
     --silent \
     --force-feedback \
