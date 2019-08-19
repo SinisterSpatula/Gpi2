@@ -243,5 +243,11 @@ case $2 in
 		joycommand="$basicGPI $pcsx &"
 		eval $joycommand
 	;;
+	
+		scummvm)
+		$xboxkill
+		joycommand="$basicGPI $scummvm &"
+		eval $joycommand
+	;;
 
 esac
