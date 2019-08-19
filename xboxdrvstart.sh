@@ -50,7 +50,7 @@ basicGPI="sudo /opt/retropie/supplementary/xboxdrv/bin/xboxdrv \
 #scummvm standalone
 scummvm="--ui-buttonmap a=BTN_SOUTH,b=BTN_EAST,x=BTN_NORTH,y=BTN_WEST,lb=BTN_TL,rb=BTN_TR \
     --ui-buttonmap start=KEY_Y,back=KEY_N \
-    --ui-axismap dpad_x=dpad_x,dpad_y=dpad_y"
+    --ui-axismap x1=dpad_x,y1=dpad_y"
 
 #Outrun Engine
 cannonball="--ui-buttonmap x=KEY_V,a=KEY_B,b=KEY_A,Y=KEY_G \
