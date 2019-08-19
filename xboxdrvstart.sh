@@ -49,7 +49,7 @@ basicGPI="sudo /opt/retropie/supplementary/xboxdrv/bin/xboxdrv \
 
 #scummvm standalone
 scummvm="--ui-buttonmap a=a,b=b,x=x,Y=y,lb=lb,rb=rb \
-    --ui-buttonmap start=KEY_Y,back=KEY_N,back+start=KEY_LEFTALT+KEY_X \
+    --ui-buttonmap start=KEY_Y,back=KEY_N \
     --ui-axismap dpad_x=dpad_x,dpad_y=dpad_y"
 
 #Outrun Engine
