@@ -47,6 +47,11 @@ basicGPI="sudo /opt/retropie/supplementary/xboxdrv/bin/xboxdrv \
 ### Extended Configurations
 ### Specific emulator configuration or any other parameters you will need only for some emulators
 
+#scummvm standalone
+scummvm="--ui-buttonmap a=a,b=b,x=x,Y=y,lb=lb,rb=rb \
+    --ui-buttonmap start=KEY_Y,back=KEY_N,back+start=KEY_LEFTALT+KEY_X \
+    --ui-axismap dpad_x=dpad_x,dpad_y=dpad_y"
+
 #Outrun Engine
 cannonball="--ui-buttonmap x=KEY_V,a=KEY_B,b=KEY_A,Y=KEY_G \
     --ui-buttonmap start=KEY_ENTER,back=KEY_1,back+start=KEY_ESC \
