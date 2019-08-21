@@ -60,7 +60,7 @@ cd
 cd /opt/retropie/configs/all
 sudo wget -O xboxdrvend.sh https://raw.githubusercontent.com/SinisterSpatula/Gpi2/master/xboxdrvend.sh
 sudo wget -O xboxdrvstart.sh https://raw.githubusercontent.com/SinisterSpatula/Gpi2/master/xboxdrvstart.sh
-sudo chmod a+x *.sh
+sudo chmod 644 *.sh
 cd
 cd /opt/retropie/supplementary/xboxdrv/bin
 sudo wget -O quit.sh https://raw.githubusercontent.com/SinisterSpatula/Gpi2/master/quit.sh
@@ -89,7 +89,7 @@ cd
 cd /opt/retropie/configs/all
 sudo wget -O xboxdrvend.sh https://raw.githubusercontent.com/SinisterSpatula/Gpi2/test/xboxdrvend.sh
 sudo wget -O xboxdrvstart.sh https://raw.githubusercontent.com/SinisterSpatula/Gpi2/test/xboxdrvstart.sh
-sudo chmod a+x *.sh
+sudo chmod 644 *.sh
 cd
 cd /opt/retropie/supplementary/xboxdrv/bin
 sudo wget -O quit.sh https://raw.githubusercontent.com/SinisterSpatula/Gpi2/test/quit.sh
