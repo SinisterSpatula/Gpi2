@@ -106,6 +106,35 @@ gpsp="--ui-buttonmap x=KEY_S,a=KEY_Z,b=KEY_X,lb=KEY_A,Y=KEY_A,rb=KEY_S \
 pcsx="--ui-buttonmap x=KEY_D,a=KEY_X,b=KEY_Z+KEY_ENTER,Y=KEY_S,lb=KEY_W,y+lb=KEY_E,rb=KEY_R,y+rb=KEY_T \
     --ui-buttonmap start=KEY_V,back=KEY_C,back+x=KEY_ESC,back+start=exec:/opt/retropie/supplementary/xboxdrv/bin/quit.sh,back+lb=KEY_F2,back+rb=KEY_F1 \
     --ui-buttonmap du=KEY_UP,dd=KEY_DOWN,dl=KEY_LEFT,dr=KEY_RIGHT"
+    
+    
+    # Tayle's Orbbotron config
+
+# 
+# Basics: D-pad for movement, face buttons for freelook. More specifically, X looks up,
+# B looks down, Y looks left, A looks right. Oh, also the right shoulder button (RB) is
+# mapped to the left mouse button, which means it can be used for the menus, and it shoots,
+# too.
+# 
+# On top of that, Select shows the scoreboard, Start uses the inventory item, while pressing
+# both Select and Start brings up the pause menu.
+#
+# Here's the rest of the button combos:
+#
+# - LB - strafe / faster turning / (hold for longer) crouch
+# - LB then RB - jump
+# 
+# - SELECT then Y - previous weapon
+# - SELECT then A - next weapon
+# - SELECT then B - swap to the gauntlet
+# - SELECT then X - custom bind (attached to the E key)
+# - SELECT then LEFT - left key (for going through the configs)
+# - SELECT then RIGHT - right key (for going through the configs)
+# 
+
+quake3="--ui-buttonmap x=rel:REL_Y:-2:5,b=rel:REL_Y:2:5,y=rel:REL_X:-3:5,a=rel:REL_X:3:5, lb=KEY_LEFTALT:KEY_C:300,rb=BTN_LEFT,start=KEY_ENTER,back=KEY_TAB \
+    --ui-buttonmap lb+rb=KEY_SPACE,back+dl=KEY_LEFT,back+dr=KEY_RIGHT,back+b=KEY_1,back+x=KEY_E,back+y=KEY_LEFTBRACE,back+a=KEY_RIGHTBRACE,lb+x=rel:REL_Y:-4:5,lb+b=rel:REL_Y:4:5,lb+y=rel:REL_X:-6:5,lb+a=rel:REL_X:6:5,back+start=KEY_ESC \
+    --ui-buttonmap du=KEY_UP,dd=KEY_DOWN,dl=KEY_A,dr=KEY_D"
 
 fourway="--four-way-restrictor"
 
@@ -236,6 +265,11 @@ case $2 in
 	pcsx-rearmed)
 		$xboxkill
 		joycommand="$basicGPI $pcsx &"
+		eval $joycommand
+	;;
+		quake3)
+		$xboxkill
+		joycommand="$basicGPI $quake3 &"
 		eval $joycommand
 	;;
 
