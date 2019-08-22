@@ -128,7 +128,8 @@ sudo chmod a+x *.sh
     echo "|| Success!  ||"
     echo "---------------"
     sleep 5s
-exit
+    $0
+    exit 1
   else
     echo "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
     echo ".                                      ."
