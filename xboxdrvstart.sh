@@ -27,7 +27,7 @@ echo "rom is "$rom >> /dev/shm/runcommand.log
 
 ### Set variables for your joypad and emulator
 ### Basic Configuraions - Standard controller mappings 
-basicGPI="sudo /opt/retropie/supplementary/xboxdrv/bin/xboxdrv \
+basicGPI="sleep 3 && sudo /opt/retropie/supplementary/xboxdrv/bin/xboxdrv \
     --evdev $joystick \
     --detach-kernel-driver \
     --silent \
