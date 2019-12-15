@@ -1,4 +1,5 @@
 #!/bin/bash
+
 #=============================================================================
 #title:         menu.sh
 #description:   Menu which allows multiple items to be selected, for the Controls for the GPi
@@ -47,100 +48,99 @@ function main_menu() {
 ######################
 
 function validate_url(){
-  if [[ `wget -S --spider $1  2>&1 | grep 'HTTP/1.1 200 OK'` ]]; then
-    return 0
-  else
-    return 1
-  fi
+    if [[ `wget -S --spider $1  2>&1 | grep 'HTTP/1.1 200 OK'` ]]; then
+        return 0
+    else
+        return 1
+    fi
 }
 
 function update_controls() {
-if validate_url https://raw.githubusercontent.com/SinisterSpatula/Gpi2/master/xboxdrvstart.sh; then
-cd
-cd /opt/retropie/configs/all
-sudo wget -O xboxdrvend.sh https://raw.githubusercontent.com/SinisterSpatula/Gpi2/master/xboxdrvend.sh
-sudo wget -O xboxdrvstart.sh https://raw.githubusercontent.com/SinisterSpatula/Gpi2/master/xboxdrvstart.sh
-sudo chmod 644 *.sh
-sudo chown pi:pi runcommand-on*
-cd
-cd /opt/retropie/supplementary/xboxdrv/bin
-sudo wget -O quit.sh https://raw.githubusercontent.com/SinisterSpatula/Gpi2/master/quit.sh
-sudo chmod a+x quit.sh
-    echo "---------------"
-    echo "|| Success!  ||"
-    echo "---------------"
-    sleep 5s
-  else
-    echo "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
-    echo ".                                      ."
-    echo ".FAILED! File not available or wifi off."
-    echo ".                                      ."
-    echo "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
-    sleep 10s
-fi
+    if validate_url https://raw.githubusercontent.com/SinisterSpatula/Gpi2/master/xboxdrvstart.sh; then
+        cd
+        cd /opt/retropie/configs/all
+        sudo wget -O xboxdrvend.sh https://raw.githubusercontent.com/SinisterSpatula/Gpi2/master/xboxdrvend.sh
+        sudo wget -O xboxdrvstart.sh https://raw.githubusercontent.com/SinisterSpatula/Gpi2/master/xboxdrvstart.sh
+        sudo chmod 644 *.sh
+        sudo chown pi:pi runcommand-on*
+        cd
+        cd /opt/retropie/supplementary/xboxdrv/bin
+        sudo wget -O quit.sh https://raw.githubusercontent.com/SinisterSpatula/Gpi2/master/quit.sh
+        sudo chmod a+x quit.sh
+        echo "---------------"
+        echo "|| Success!  ||"
+        echo "---------------"
+        sleep 5s
+    else
+        echo "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
+        echo ".                                      ."
+        echo ".FAILED! File not available or wifi off."
+        echo ".                                      ."
+        echo "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
+        sleep 10s
+    fi
 }
 
 function launch_commandline() {
-break
+    break
 }
 
 function controls_beta() {
-if validate_url https://raw.githubusercontent.com/SinisterSpatula/Gpi2/test/xboxdrvstart.sh; then
-cd
-cd /opt/retropie/configs/all
-sudo wget -O xboxdrvend.sh https://raw.githubusercontent.com/SinisterSpatula/Gpi2/test/xboxdrvend.sh
-sudo wget -O xboxdrvstart.sh https://raw.githubusercontent.com/SinisterSpatula/Gpi2/test/xboxdrvstart.sh
-sudo chmod 644 *.sh
-cd
-cd /opt/retropie/supplementary/xboxdrv/bin
-sudo wget -O quit.sh https://raw.githubusercontent.com/SinisterSpatula/Gpi2/test/quit.sh
-sudo chmod a+x quit.sh
-    echo "---------------"
-    echo "|| Success!  ||"
-    echo "---------------"
-    sleep 5s
-  else
-    echo "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
-    echo ".                                      ."
-    echo ".FAILED! File not available or wifi off."
-    echo ".                                      ."
-    echo "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
-    sleep 10s
-fi
+    if validate_url https://raw.githubusercontent.com/SinisterSpatula/Gpi2/test/xboxdrvstart.sh; then
+        cd
+        cd /opt/retropie/configs/all
+        sudo wget -O xboxdrvend.sh https://raw.githubusercontent.com/SinisterSpatula/Gpi2/test/xboxdrvend.sh
+        sudo wget -O xboxdrvstart.sh https://raw.githubusercontent.com/SinisterSpatula/Gpi2/test/xboxdrvstart.sh
+        sudo chmod 644 *.sh
+        cd
+        cd /opt/retropie/supplementary/xboxdrv/bin
+        sudo wget -O quit.sh https://raw.githubusercontent.com/SinisterSpatula/Gpi2/test/quit.sh
+        sudo chmod a+x quit.sh
+        echo "---------------"
+        echo "|| Success!  ||"
+        echo "---------------"
+        sleep 5s
+    else
+        echo "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
+        echo ".                                      ."
+        echo ".FAILED! File not available or wifi off."
+        echo ".                                      ."
+        echo "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
+        sleep 10s
+    fi
 }
 
 function system_shutdown() {
-sudo shutdown -P now
+    sudo shutdown -P now
 }
 
 function system_reboot() {
-sudo reboot
+    sudo reboot
 }
 
 function update_menu() {
-if validate_url https://raw.githubusercontent.com/SinisterSpatula/Gpi2/master/control_updater_menu.sh; then
-sudo mkdir -p ~/RetroPie/retropiemenu/Controllertools
-cd
-cd ~/RetroPie/retropiemenu/Controllertools
-sudo wget -O control_updater_menu.sh https://raw.githubusercontent.com/SinisterSpatula/Gpi2/master/control_updater_menu.sh
-sudo chmod 775 control_updater_menu.sh
-sudo chmod a+x *.sh
-    echo "---------------"
-    echo "|| Success!  ||"
-    echo "---------------"
-    sleep 5s
-    $0
-    exit 1
-  else
-    echo "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
-    echo ".                                      ."
-    echo ".FAILED! File not available or wifi off."
-    echo ".                                      ."
-    echo "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
-    sleep 10s
-fi
+    if validate_url https://raw.githubusercontent.com/SinisterSpatula/Gpi2/master/control_updater_menu.sh; then
+        sudo mkdir -p ~/RetroPie/retropiemenu/Controllertools
+        cd
+        cd ~/RetroPie/retropiemenu/Controllertools
+        sudo wget -O control_updater_menu.sh https://raw.githubusercontent.com/SinisterSpatula/Gpi2/master/control_updater_menu.sh
+        sudo chmod 775 control_updater_menu.sh
+        sudo chmod a+x *.sh
+        echo "---------------"
+        echo "|| Success!  ||"
+        echo "---------------"
+        sleep 5s
+        $0
+        exit 1
+    else
+        echo "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
+        echo ".                                      ."
+        echo ".FAILED! File not available or wifi off."
+        echo ".                                      ."
+        echo "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
+        sleep 10s
+    fi
 }
 
 # Main
-
 main_menu

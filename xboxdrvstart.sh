@@ -1,4 +1,5 @@
 #!/bin/sh
+
 ## Uncomment one or all of the following if you need to find some information about the emulator or roms
 ## Name of the emulator
 echo "1 is "$1 >> /dev/shm/runcommand.log
@@ -16,17 +17,14 @@ echo "3 is "$3 >> /dev/shm/runcommand.log
 joystick=`find /dev/input/by-id/ -name "*event-joystick*"`
 echo "Detected joystick as: "$joystick >> /dev/shm/runcommand.log
 
-
-
 ### The FUN begins
 #Get ROM name striping full path
 rom="${3##*/}"
 
 echo "rom is "$rom >> /dev/shm/runcommand.log
 
-
 ### Set variables for your joypad and emulator
-### Basic Configuraions - Standard controller mappings 
+### Basic Configuraions - Standard controller mappings
 basicGPI="sleep 3 && sudo /opt/retropie/supplementary/xboxdrv/bin/xboxdrv \
     --evdev $joystick \
     --detach-kernel-driver \
@@ -51,7 +49,7 @@ basicGPI="sleep 3 && sudo /opt/retropie/supplementary/xboxdrv/bin/xboxdrv \
 cannonball="--ui-buttonmap x=KEY_V,a=KEY_B,b=KEY_A,Y=KEY_G \
     --ui-buttonmap start=KEY_ENTER,back=KEY_1,back+start=KEY_ESC \
     --ui-buttonmap du=KEY_UP,dd=KEY_DOWN,dl=KEY_LEFT,dr=KEY_RIGHT"
-    
+
 #Streets of Rage remix
 sorr="--ui-buttonmap x=KEY_V,a=KEY_S,b=KEY_C,Y=KEY_X,lb=KEY_D,rb=KEY_B,lb+rb=KEY_A,rb+lb=KEY_A \
     --ui-buttonmap start=KEY_ENTER,back=KEY_ESC \
@@ -69,11 +67,15 @@ openbor="--ui-buttonmap x=void,a=KEY_D,b=KEY_A,Y=KEY_S,lb=KEY_L,rb=KEY_R \
 mame4all="--ui-buttonmap start=KEY_1,back=KEY_5,back+start=KEY_ESC \
     --ui-buttonmap b=KEY_LEFTCTRL,a=KEY_LEFTALT,x=KEY_SPACE,y=KEY_LEFTSHIFT,lb=KEY_Z,rb=KEY_X \
     --ui-buttonmap du=KEY_UP,dd=KEY_DOWN,dl=KEY_LEFT,dr=KEY_RIGHT,y+lb=KEY_TAB,y+rb=KEY_ENTER"
-    
+
+advmame="--ui-buttonmap start=KEY_1+KEY_ENTER,back=KEY_5,back+start=KEY_ESC \
+    --ui-buttonmap b=KEY_LEFTCTRL,a=KEY_LEFTALT,x=KEY_SPACE,y=KEY_LEFTSHIFT,lb=KEY_Z,rb=KEY_X \
+    --ui-buttonmap du=KEY_UP,dd=KEY_DOWN,dl=KEY_LEFT,dr=KEY_RIGHT,y+lb=KEY_TAB,y+rb=KEY_ENTER"
+
 advmame94="--ui-buttonmap start=KEY_1+KEY_ENTER,back=KEY_5,back+start=KEY_ESC \
     --ui-buttonmap b=KEY_LEFTCTRL,a=KEY_LEFTALT,x=KEY_SPACE,y=KEY_LEFTSHIFT,lb=KEY_Z,rb=KEY_X \
     --ui-buttonmap du=KEY_UP,dd=KEY_DOWN,dl=KEY_LEFT,dr=KEY_RIGHT,y+lb=KEY_TAB,y+rb=KEY_ENTER"
-	
+
 pifba="--ui-buttonmap b=KEY_LEFTCTRL,y=KEY_SPACE,a=KEY_LEFTALT,x=KEY_LEFTSHIFT,lb=KEY_Z,rb=KEY_X \
     --ui-buttonmap start=KEY_ENTER,back=KEY_TAB,back+start=KEY_ESC \
     --ui-buttonmap du=KEY_UP,dd=KEY_DOWN,dl=KEY_LEFT,dr=KEY_RIGHT"
@@ -81,7 +83,7 @@ pifba="--ui-buttonmap b=KEY_LEFTCTRL,y=KEY_SPACE,a=KEY_LEFTALT,x=KEY_LEFTSHIFT,l
 fbacapcom="--ui-buttonmap b=KEY_LEFTSHIFT,y=KEY_LEFTCTRL,a=KEY_Z,x=KEY_LEFTALT,lb=KEY_SPACE,rb=KEY_X \
     --ui-buttonmap start=KEY_ENTER,back=KEY_TAB,back+start=KEY_ESC \
     --ui-buttonmap du=KEY_UP,dd=KEY_DOWN,dl=KEY_LEFT,dr=KEY_RIGHT"
-	
+
 dosbox="--ui-buttonmap x=KEY_LEFTALT,a=KEY_SPACE,b=KEY_LEFTCTRL,lb=BTN_LEFT,y+lb=BTN_LEFT,rb=BTN_RIGHT,y+rb=BTN_RIGHT \
     --ui-buttonmap back=KEY_ESC,back+start=KEY_LEFTCTRL+KEY_F9 \
     --ui-buttonmap du=KEY_UP,y+du=REL_Y:1:20,dd=KEY_DOWN,y+dd=REL_Y:-1:20,dl=KEY_LEFT,y+dl=REL_X:-1:20,dr=KEY_RIGHT,y+dr=REL_X:1:20 \
@@ -90,7 +92,7 @@ dosbox="--ui-buttonmap x=KEY_LEFTALT,a=KEY_SPACE,b=KEY_LEFTCTRL,lb=BTN_LEFT,y+lb
 minecraft="--ui-buttonmap x=KEY_X:KEY_E:1000,a=KEY_LEFTSHIFT,b=KEY_SPACE,lb=BTN_LEFT,y+lb=rel:REL_WHEEL:1:250,rb=BTN_RIGHT,y+rb=rel:REL_WHEEL:-1:250 \
     --ui-buttonmap back=KEY_ESC,start=KEY_ENTER,back+start=exec:/opt/retropie/supplementary/xboxdrv/bin/quit.sh \
     --ui-buttonmap du=KEY_W,y+du=rel:REL_Y:-2:5,dd=KEY_S,y+dd=rel:REL_Y:2:5,dl=KEY_A,y+dl=rel:REL_X:-2:5,dr=KEY_D,y+dr=rel:REL_X:2:5"
-	
+
 daphne="--ui-buttonmap x=KEY_LEFTSHIFT,a=KEY_LEFTCTRL,b=KEY_LEFTALT \
     --ui-buttonmap start=KEY_1,back=KEY_5,back+start=KEY_ESC \
     --ui-buttonmap du=KEY_UP,dd=KEY_DOWN,dl=KEY_LEFT,dr=KEY_RIGHT"
@@ -102,11 +104,11 @@ mpv="--ui-buttonmap x=KEY_PAGEDOWN,a=KEY_P,b=KEY_M,y=KEY_PAGEUP,lb=KEY_J,rb=KEY_
 gpsp="--ui-buttonmap x=KEY_S,a=KEY_Z,b=KEY_X,lb=KEY_A,Y=KEY_A,rb=KEY_S \
     --ui-buttonmap start=KEY_ENTER,back=KEY_BACKSPACE,back+x=KEY_F10,back+start=KEY_ESC \
     --ui-buttonmap du=KEY_UP,dd=KEY_DOWN,dl=KEY_LEFT,dr=KEY_RIGHT"
-	
+
 pcsx="--ui-buttonmap x=KEY_D,a=KEY_X,b=KEY_Z+KEY_ENTER,Y=KEY_S,lb=KEY_W,y+lb=KEY_E,rb=KEY_R,y+rb=KEY_T \
     --ui-buttonmap start=KEY_V,back=KEY_C,back+x=KEY_ESC,back+start=exec:/opt/retropie/supplementary/xboxdrv/bin/quit.sh,back+lb=KEY_F2,back+rb=KEY_F1 \
     --ui-buttonmap du=KEY_UP,dd=KEY_DOWN,dl=KEY_LEFT,dr=KEY_RIGHT"
-    
+
 # Tayle's Orbbotron config (quake3)
 # Basics: D-pad for movement, face buttons for freelook. More specifically, X looks up,
 # B looks down, Y looks left, A looks right. Oh, also the right shoulder button (RB) is
@@ -127,12 +129,9 @@ quake3="--ui-buttonmap x=rel:REL_Y:-2:5,b=rel:REL_Y:2:5,y=rel:REL_X:-3:5,a=rel:R
     --ui-buttonmap back+y=KEY_LEFTBRACE,back+a=KEY_RIGHTBRACE,lb+x=rel:REL_Y:-4:5,lb+b=rel:REL_Y:4:5,lb+y=rel:REL_X:-6:5 \
     --ui-buttonmap lb+a=rel:REL_X:6:5,back+start=KEY_ESC,du=KEY_UP,dd=KEY_DOWN,dl=KEY_A,dr=KEY_D"
 
-
-
 fourway="--four-way-restrictor"
 
 invert="--ui-buttonmap du=KEY_DOWN,dd=KEY_UP"
-
 
 ### Kill Command
 xboxkill="sudo killall xboxdrv > /dev/null 2>&1"
@@ -155,7 +154,7 @@ case $2 in
 			;;
 		esac
 	;;
-	
+
 	pifba)
 		case $rom in
 			"cybots.zip"|"dstlk.zip"|"hsf2.zip"|"hsf2j.zip"|"msh.zip"|"mshvsf.zip"|"mshvsfj.zip"|"mvsc.zip"|"mvscu.zip"|"nwarr.zip"|"sfa2.zip"|"sfa3.zip"|"sfa.zip"|"sfz3jr1.zip"|"sf2ce.zip"|"sf2hf.zip"|"sf2rb.zip"|"sf2.zip"|"sgemf.zip"|"ssf2t.zip"|"ssf2.zip"|"vhunt2.zip"|"vsav2.zip"|"vsav.zip"|"xmvsf.zip"|"xmcota.zip") # Configuration used only for these ROMs
@@ -170,7 +169,22 @@ case $2 in
 			;;
 		esac
 	;;
-	
+
+	advmame)
+		case $rom in
+			"test1.zip"|"test2.zip"|"test3.zip") # Configuration used only for these ROMs
+				$xboxkill
+				joycommand="$basicGPI $advmame &"
+				eval $joycommand
+			;;
+			*) # Configuration for every other ROMs on this emulator
+				$xboxkill
+				joycommand="$basicGPI $advmame &"
+				eval $joycommand
+			;;
+		esac
+	;;
+
 	advmame-0.94)
 		case $rom in
 			"test1.zip"|"test2.zip"|"test3.zip") # Configuration used only for these ROMs
@@ -185,7 +199,7 @@ case $2 in
 			;;
 		esac
 	;;
-	
+
 	dosbox)
 	case $rom in
 		"test1.zip"|"test2.zip"|"test3.zip") # Configuration used only for these ROMs
@@ -206,19 +220,19 @@ case $2 in
 		joycommand="$basicGPI $eduke32 &"
 		eval $joycommand
 	;;
-	
+
 	openbor)
 		$xboxkill
 		joycommand="$basicGPI $openbor &"
 		eval $joycommand
 	;;
-	
+
 	openbor-6xxx)
 		$xboxkill
 		joycommand="$basicGPI $openbor &"
 		eval $joycommand
 	;;
-	
+
 	sorr)
 		$xboxkill
 		joycommand="$basicGPI $sorr &"
@@ -236,25 +250,25 @@ case $2 in
 		joycommand="$basicGPI $minecraft &"
 		eval $joycommand
 	;;
-	
+
 	daphne)
 		$xboxkill
 		joycommand="$basicGPI $daphne &"
 		eval $joycommand
 	;;
-	
+
 	mpv)
 		$xboxkill
 		joycommand="$basicGPI $mpv &"
 		eval $joycommand
 	;;
-	
+
 	gpsp)
 		$xboxkill
 		joycommand="$basicGPI $gpsp &"
 		eval $joycommand
 	;;
-	
+
 	pcsx-rearmed)
 		$xboxkill
 		joycommand="$basicGPI $pcsx &"
