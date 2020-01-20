@@ -1,5 +1,7 @@
 # Gpi2 scripts
 
+### As of January 1st 2020 I'm not actively maintaining this project anymore.  Feel free to fork it, and modify it, or become the new maintainer of it if you like.  I'll still try to provide help if and when I can.  There is also a newer experimental version (also no longer maintained) here: [https://github.com/SinisterSpatula/Gpi3/](https://github.com/SinisterSpatula/Gpi3/)
+
 These xboxdrv controller scripts greatly enhance the capabilities of your Gpi Case.  They can provide many virtual buttons using a button as a modifier.  (In effect, it can turn the six button control scheme into a 12 button one!)  It also helps by mapping controls to keyboard keys for emulators that lack the ability to interface with the Gpi case controls (some of the standalone non-libretro cores).
 
 # To migrate to or to install the new framework:
